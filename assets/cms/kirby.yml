@@ -1,0 +1,12 @@
+pricing:
+  text: 99€ per site
+  source: https://getkirby.com/buy
+homepage:
+  text: getkirby.com
+  url: https://getkirby.com
+hosting:
+  text: Self-hosted / On-premises
+programming_language:
+  text: PHP
+database:
+  text: Flat-file

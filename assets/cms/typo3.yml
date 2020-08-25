@@ -1,0 +1,12 @@
+pricing:
+  text: Free
+homepage:
+  text: typo3.org
+  url: https://typo3.org
+hosting:
+  text: Self-hosted / On-premises
+programming_language:
+  text: PHP
+database:
+  text: Doctrine (MySQL, MariaDB, PostgreSQL, SQL Server, ...)
+  source: https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/Database/Introduction/Index.html

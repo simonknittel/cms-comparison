@@ -1,0 +1,11 @@
+pricing:
+  text: Free
+homepage:
+  text: wordpress.org
+  url: https://wordpress.org
+hosting:
+  text: Self-hosted / On-premises
+programming_language:
+  text: PHP
+database:
+  text: MySQL, MariaDB

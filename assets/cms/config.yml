@@ -1,0 +1,15 @@
+categories:
+  - homepage
+  - pricing
+  - hosting
+  - programming_language
+  - database
+systems:
+  - Contentful
+  - DatoCMS
+  - Ghost
+  - Grav
+  - Kirby
+  - Strapi
+  - TYPO3
+  - WordPress

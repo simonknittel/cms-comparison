@@ -1,5 +1,5 @@
 <template>
   <main>
-    <h1>Index</h1>
+    <h2>Shop Systems</h2>
   </main>
 </template>

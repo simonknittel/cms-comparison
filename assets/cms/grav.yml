@@ -1,0 +1,11 @@
+pricing:
+  text: Free
+homepage:
+  text: getgrav.org
+  url: https://getgrav.org
+hosting:
+  text: Self-hosted / On-premises
+programming_language:
+  text: PHP
+database:
+  text: Flat-file

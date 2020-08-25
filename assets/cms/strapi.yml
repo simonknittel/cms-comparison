@@ -1,0 +1,13 @@
+pricing:
+  text: Several plans available (including a free one)
+  source: https://strapi.io/pricing
+homepage:
+  text: strapi.io
+  url: https://strapi.io
+hosting:
+  text: Self-hosted / On-premises
+programming_language:
+  text: Node.js
+database:
+  text: PostgreSQL, MongoDB, SQLite, MySQL, MariaDB
+  source: https://strapi.io/documentation/v3.x/guides/databases.html
