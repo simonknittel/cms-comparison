@@ -15,6 +15,19 @@
           <span v-else>{{ systemData[category].text }}</span>
         </div>
 
+        <div v-else-if="category === 'framework'" class="framework">
+          <small v-if="systemData[category].text === '/'">Not applicable</small>
+          <span v-else>{{ systemData[category].text }}</span>
+
+          <a
+            v-if="systemData[category].source"
+            :href="systemData[category].source"
+            target="_blank"
+            rel="noopener"
+            class="source"
+          >Source</a>
+        </div>
+
         <div v-else-if="category === 'database'" class="database">
           <small v-if="systemData[category].text === '/'">Not applicable</small>
           <span v-else>{{ systemData[category].text }}</span>
@@ -42,7 +55,8 @@
       </div>
 
       <small v-else class="missing">
-        Missing data.<br>See <a href="#">here</a> on how to add.
+        Missing data.
+        <!-- <br>See <a href="#">here</a> on how to add. -->
       </small>
     </div>
 
@@ -74,21 +88,28 @@ export default {
 
 .programming_language {
   small {
-    color: grey;
+    color: hsla(0, 0%, 0%, .3);
     font-size: inherit;
   }
 }
 
 .database {
   small {
-    color: grey;
+    color: hsla(0, 0%, 0%, .3);
+    font-size: inherit;
+  }
+}
+
+.framework {
+  small {
+    color: hsla(0, 0%, 0%, .3);
     font-size: inherit;
   }
 }
 
 .missing {
   font-size: .8rem;
-  color: grey;
+  color: hsla(0, 0%, 0%, .3);
 
   a {
     color: inherit;
@@ -99,6 +120,6 @@ export default {
   display: block;
   margin-top: .25rem;
   font-size: .8rem;
-  color: grey;
+  color: hsla(0, 0%, 0%, .3);
 }
 </style>

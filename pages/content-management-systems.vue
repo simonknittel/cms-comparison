@@ -1,32 +1,36 @@
 <template>
   <main class="cms">
-    <table>
-      <thead>
-        <tr>
-          <th></th>
+    <div class="table-wrapper">
+      <div class="table-wrapper__inner">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
 
-          <th v-for="system in systems" :key="system">
-            <span>{{ system }}</span>
-          </th>
-        </tr>
-      </thead>
+              <th v-for="system in systems" :key="system">
+                <span>{{ system }}</span>
+              </th>
+            </tr>
+          </thead>
 
-      <tbody>
-        <tr v-for="category in categories" :key="category">
-          <th>
-            <span>{{ category }}</span>
-          </th>
+          <tbody>
+            <tr v-for="category in categories" :key="category">
+              <th>
+                <span>{{ category }}</span>
+              </th>
 
-          <Cell
-            v-for="system in systems"
-            :key="system"
+              <Cell
+                v-for="system in systems"
+                :key="system"
 
-            :systemData="systemData[system]"
-            :category="category"
-          />
-        </tr>
-      </tbody>
-    </table>
+                :systemData="systemData[system]"
+                :category="category"
+              />
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -52,7 +56,8 @@ export default {
       const fileName = system.toLowerCase()
       import(`~/assets/cms/${fileName}.yml`)
         .then(yml => {
-          this.systemData[system] = yml.default
+          console.log(yml.default)
+          this.systemData[system] = yml.default ? yml.default : {}
         })
     }
   }
@@ -61,14 +66,65 @@ export default {
 
 <style lang="scss">
 .cms {
-  overflow-x: auto;
   margin-left: 1rem;
   margin-right: 1rem;
+
+}
+
+.table-wrapper {
+  position: relative;
+  box-shadow: 3px 3px 5px 0 hsla(0, 0%, 0%, .05);
+  background-color: #fff;
+
+  // &::before {
+  //   content: '';
+
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   width: 10rem;
+  //   height: 100%;
+
+  //   background: linear-gradient(to right, hsla(0, 0%, 100%, 1), hsla(0, 0%, 0%, 0));
+  // }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+
+    background: linear-gradient(to left, hsla(0, 0%, 100%, 1), hsla(0, 0%, 0%, 0));
+  }
+}
+
+.table-wrapper__inner {
+  overflow-x: auto;
+}
+
+.table-wrapper__inner::-webkit-scrollbar-track {
+  height: .3rem;
+  background-color: transparent;
+}
+
+.table-wrapper__inner::-webkit-scrollbar {
+  height: .3rem;
+  background-color: transparent;
+}
+
+.table-wrapper__inner::-webkit-scrollbar-thumb {
+  background-color: hsla(180, 25%, 50%, .3);
 }
 
 table {
   table-layout: fixed;
   width: 100%;
+  padding: 1rem;
+
+  line-height: 1.5;
 }
 
 th {
@@ -95,7 +151,6 @@ thead {
   }
 }
 
-
 th, td {
   vertical-align: top;
   padding: .5rem;
@@ -103,11 +158,13 @@ th, td {
 
 td {
   &:nth-of-type(odd) {
-    background-color: hsla(180, 25%, 50%, .1);
+    background-color: hsla(180, 25%, 50%, .05);
   }
 
   &:nth-of-type(even) {
-    background-color: hsla(180, 25%, 50%, .2);
+    background-color: hsla(180, 25%, 50%, .1);
   }
 }
+
+
 </style>

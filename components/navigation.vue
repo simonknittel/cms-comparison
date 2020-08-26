@@ -39,6 +39,8 @@
     }
 
     &.nuxt-link-active {
+      font-weight: bold;
+
       .nav__item__inner {
         border-bottom: 2px solid hsl(180, 50%, 50%);
       }

@@ -10,3 +10,6 @@ programming_language:
 database:
   text: Bookshelf.js (MySQL, MariaDB, SQLite, ...)
   source: https://ghost.org/docs/concepts/architecture/#data--storage
+framework:
+  text: Express.js
+  source: https://github.com/TryGhost/Ghost/blob/master/package.json

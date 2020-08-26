@@ -10,3 +10,8 @@ programming_language:
   text: /
 database:
   text: /
+2fa:
+  text: Built-in
+  source: https://www.contentful.com/security/
+framework:
+  text: /

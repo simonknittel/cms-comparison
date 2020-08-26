@@ -11,3 +11,6 @@ programming_language:
 database:
   text: PostgreSQL, MongoDB, SQLite, MySQL, MariaDB
   source: https://strapi.io/documentation/v3.x/guides/databases.html
+framework:
+  text: Koa
+  source: https://github.com/strapi/strapi/tree/master/packages/strapi

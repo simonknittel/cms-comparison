@@ -10,3 +10,8 @@ programming_language:
   text: /
 database:
   text: /
+2fa:
+  text: Built-in
+  source: https://www.datocms.com/legal/security
+framework:
+  text: /

@@ -9,3 +9,7 @@ programming_language:
   text: PHP
 database:
   text: Flat-file
+  source: https://learn.getgrav.org/16/basics/folder-structure
+framework:
+  text: Symfony
+  source: https://symfony.com/projects/grav

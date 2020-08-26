@@ -4,12 +4,20 @@ categories:
   - hosting
   - programming_language
   - database
+  - 2fa
+  - custom_themes
+  - extandable
+  - plugin_store
+  - enterprise_support
+  - framework
 systems:
   - Contentful
   - DatoCMS
   - Ghost
   - Grav
   - Kirby
+  - Squarespace
   - Strapi
   - TYPO3
+  - Wix
   - WordPress

@@ -1,10 +1,14 @@
 <template>
   <div>
-    <h1 class="logo">Compare ...</h1>
+    <Header />
 
     <Navigation />
 
     <Nuxt />
+
+    <small class="hint">Uses developer specific keywords</small>
+
+    <Instructions />
   </div>
 </template>
 
@@ -37,17 +41,24 @@ html {
   background-color: hsla(180, 50%, 50% , .1);
 }
 
-.logo {
-  margin-top: 1rem;
-  text-align: center;
-  font-weight: normal;
-}
-
 .nav {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .cms {
+  margin-top: 2rem;
+}
+
+.hint {
+  display: block;
+
   margin-top: 1rem;
+
+  font-size: .9rem;
+  text-align: center;
+}
+
+.instructions {
+  margin-top: 4rem;
 }
 </style>

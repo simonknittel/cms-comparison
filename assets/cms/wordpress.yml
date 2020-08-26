@@ -9,3 +9,10 @@ programming_language:
   text: PHP
 database:
   text: MySQL, MariaDB
+extandable:
+  text: Via plugins
+  source: https://wordpress.org/support/article/managing-plugins/
+plugin_store:
+  text: https://wordpress.org/plugins/
+framework:
+  text: No framework used.
