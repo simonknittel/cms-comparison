@@ -7,11 +7,20 @@ homepage:
 hosting:
   text: Cloud service
 programming_language:
-  text: /
+  text: Not applicable
 database:
-  text: /
+  text: Not applicable
 2fa:
   text: Built-in
   source: https://www.contentful.com/security/
 framework:
-  text: /
+  text: Not applicable
+scheduled_publishing:
+  text: Yes, built-in
+  source: https://www.contentful.com/developers/docs/tutorials/general/scheduled-publishing/
+graphql:
+  text: Yes, built-in
+  source: https://www.contentful.com/developers/docs/references/graphql/
+rest_api:
+  text: Yes, built-in
+  source: https://www.contentful.com/developers/docs/references/content-delivery-api/

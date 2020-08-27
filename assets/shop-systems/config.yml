@@ -1,0 +1,16 @@
+categories:
+  homepage:
+    title: Homepage
+  pricing:
+    title: Pricing
+  hosting:
+    title: Hosting
+systems:
+  magento:
+    title: Magento
+  shopify:
+    title: Shopify
+  shopware:
+    title: Shopware
+  woocommerce:
+    title: WooCommerce

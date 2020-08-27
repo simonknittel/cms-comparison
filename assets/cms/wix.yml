@@ -2,4 +2,8 @@ homepage:
   text: wix.com
   url: https://www.wix.com/
 framework:
-  text: /
+  text: Not applicable
+hosting:
+  text: Cloud service
+database:
+  text: Not applicable

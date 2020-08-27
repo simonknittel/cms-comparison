@@ -7,8 +7,14 @@
             <tr>
               <th></th>
 
-              <th v-for="system in systems" :key="system">
-                <span>{{ system }}</span>
+              <th v-for="system in systems" :key="system.id">
+                <img
+                  v-if="system.logo"
+                  :src="require(`../assets/logos/${system.logo}`)"
+                  :alt="system.title"
+                >
+
+                <span v-else>{{ system.title }}</span>
               </th>
             </tr>
           </thead>
@@ -16,15 +22,15 @@
           <tbody>
             <tr v-for="category in categories" :key="category">
               <th>
-                <span>{{ category }}</span>
+                <span>{{ category.title }}</span>
               </th>
 
               <Cell
                 v-for="system in systems"
-                :key="system"
+                :key="system.id"
 
-                :systemData="systemData[system]"
-                :category="category"
+                :systemData="systemData[system.id]"
+                :category="category.id"
               />
             </tr>
           </tbody>
@@ -38,25 +44,44 @@
 import { categories, systems } from '~/assets/cms/config.yml'
 
 const initialSystemData = {}
-for (const system of systems) {
+for (const system in systems) {
+  if (!systems.hasOwnProperty(system)) continue
   initialSystemData[system] = {}
 }
 
 export default {
   name: 'ContentManagementSystems',
   data() {
+    const systemsArray = []
+    for (const system in systems) {
+      if (!systems.hasOwnProperty(system)) continue
+      systemsArray.push({
+        id: system,
+        ...systems[system]
+      })
+    }
+
+    const categoriesArray = []
+    for (const category in categories) {
+      if (!categories.hasOwnProperty(category)) continue
+      categoriesArray.push({
+        id: category,
+        title: categories[category].title
+      })
+    }
+
     return {
-      categories,
-      systems,
+      categories: categoriesArray,
+      systems: systemsArray,
       systemData: initialSystemData
     }
   },
   created() {
-    for (const system of systems) {
-      const fileName = system.toLowerCase()
-      import(`~/assets/cms/${fileName}.yml`)
+    for (const system in systems) {
+      if (!systems.hasOwnProperty(system)) continue
+
+      import(`~/assets/cms/${system}.yml`)
         .then(yml => {
-          console.log(yml.default)
           this.systemData[system] = yml.default ? yml.default : {}
         })
     }
@@ -68,7 +93,7 @@ export default {
 .cms {
   margin-left: 1rem;
   margin-right: 1rem;
-
+  font-size: .9rem;
 }
 
 .table-wrapper {
@@ -122,24 +147,17 @@ export default {
 table {
   table-layout: fixed;
   width: 100%;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
 
   line-height: 1.5;
-}
-
-th {
-  text-align: left;
-
-  span {
-    display: inline-block;
-    padding-bottom: .25rem;
-    border-bottom: 2px solid hsla(180, 25%, 50%, .3);
-  }
 }
 
 thead {
   th {
     width: 12rem;
+    max-height: 5rem;
+
+    vertical-align: center;
 
     &:first-of-type {
       width: 9rem;
@@ -148,12 +166,35 @@ thead {
         border-bottom: none;
       }
     }
+
+    img {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
-th, td {
-  vertical-align: top;
+tbody {
+  th, td {
+    vertical-align: top;
+  }
+
+  th {
+    text-align: left;
+  }
+}
+
+th {
   padding: .5rem;
+}
+
+th {
+  span {
+    display: inline-block;
+    padding-bottom: .25rem;
+    border-bottom: 2px solid hsla(180, 25%, 50%, .3);
+  }
 }
 
 td {
@@ -165,6 +206,4 @@ td {
     background-color: hsla(180, 25%, 50%, .1);
   }
 }
-
-
 </style>

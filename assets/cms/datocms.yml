@@ -7,11 +7,17 @@ homepage:
 hosting:
   text: Cloud service
 programming_language:
-  text: /
+  text: Not applicable
 database:
-  text: /
+  text: Not applicable
 2fa:
   text: Built-in
   source: https://www.datocms.com/legal/security
 framework:
-  text: /
+  text: Not applicable
+graphql:
+  text: Yes, built-in
+  source: https://www.datocms.com/docs/content-delivery-api
+rest_api:
+  text: No
+  source: https://www.datocms.com/docs/content-delivery-api

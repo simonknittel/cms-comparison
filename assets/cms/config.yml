@@ -1,23 +1,62 @@
 categories:
-  - homepage
-  - pricing
-  - hosting
-  - programming_language
-  - database
-  - 2fa
-  - custom_themes
-  - extandable
-  - plugin_store
-  - enterprise_support
-  - framework
+  homepage:
+    title: Homepage
+  pricing:
+    title: Pricing
+  hosting:
+    title: Hosting
+  programming_language:
+    title: Programming language
+  database:
+    title: Database
+  2fa:
+    title: 2FA
+  custom_themes:
+    title: Custom themes
+  extandable:
+    title: Extandable
+  plugin_store:
+    title: Plugin store
+  enterprise_support:
+    title: Enterprise support
+  framework:
+    title: Framework
+  scheduled_publishing:
+    title: Scheduled publishing
+  signup_confirmation_email:
+    title: Singup confirmation email
+  rest_api:
+    title: REST API
+  graphql:
+    title: GraphQL
+  image_upload:
+    title: Image upload
+  image_transformations:
+    title: Image transformations
 systems:
-  - Contentful
-  - DatoCMS
-  - Ghost
-  - Grav
-  - Kirby
-  - Squarespace
-  - Strapi
-  - TYPO3
-  - Wix
-  - WordPress
+  contentful:
+    title: Contentful
+  craft_cms:
+    title: Craft CMS
+  datocms:
+    title: DatoCMS
+  ghost:
+    title: Ghost
+  grav:
+    title: Grav
+  kirby:
+    title: Kirby
+  squarespace:
+    title: Squarespace
+  strapi:
+    title: Strapi
+  typo3:
+    title: TYPO3
+    logo: typo3.png
+  wix:
+    title: Wix
+  wordpress:
+    title: WordPress
+    logo: wordpress.png
+  wordpresscom:
+    title: WordPress.com

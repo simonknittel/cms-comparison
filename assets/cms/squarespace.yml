@@ -2,4 +2,8 @@ homepage:
   text: squarespace.com
   url: https://www.squarespace.com/
 framework:
-  text: /
+  text: Not applicable
+hosting:
+  text: Cloud service
+database:
+  text: Not applicable

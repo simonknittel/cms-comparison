@@ -14,7 +14,8 @@ extandable:
   text: Via extensions
   source: https://typo3.org/cms/features/open-extensible-customizable
 plugin_store:
-  text: https://extensions.typo3.org/
+  text: extensions.typo3.org
+  url: https://extensions.typo3.org/
 framework:
   text: Symfony
   source: https://symfony.com/projects/typo3

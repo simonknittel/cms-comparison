@@ -12,8 +12,9 @@ database:
   text: Flat-file
   source: https://getkirby.com/docs/guide/content/introduction
 framework:
-  text: No framework used.
+  text: No framework used
 extandable:
   text: Via plugins
 plugin_store:
-  text: https://getkirby.com/plugins
+  text: getkirby.com/plugins
+  url: https://getkirby.com/plugins

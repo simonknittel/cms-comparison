@@ -9,6 +9,8 @@
     <small class="hint">Uses developer specific keywords</small>
 
     <Instructions />
+
+    <Footer />
   </div>
 </template>
 
@@ -38,7 +40,7 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 
-  background-color: hsla(180, 50%, 50% , .1);
+  background-color: hsla(180, 50%, 50% , .05);
 }
 
 .nav {
@@ -59,6 +61,10 @@ html {
 }
 
 .instructions {
+  margin-top: 4rem;
+}
+
+.footer {
   margin-top: 4rem;
 }
 </style>

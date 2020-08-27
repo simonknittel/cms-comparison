@@ -13,6 +13,17 @@ extandable:
   text: Via plugins
   source: https://wordpress.org/support/article/managing-plugins/
 plugin_store:
-  text: https://wordpress.org/plugins/
+  text: wordpress.org/plugins/
+  url: https://wordpress.org/plugins/
 framework:
-  text: No framework used.
+  text: No framework used
+scheduled_publishing:
+  text: Yes, built-in
+rest_api:
+  text: Yes, built-in
+  source: https://developer.wordpress.org/rest-api/
+graphql:
+  text: No, only via plugin
+  source: https://www.wpgraphql.com/
+image_transformations:
+  text: On upload, defined by the used theme
