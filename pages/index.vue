@@ -1,5 +1,9 @@
-<template>
-  <main>
-    <h1>Index</h1>
-  </main>
-</template>
+<template></template>
+
+<script>
+export default {
+  middleware({ redirect }) {
+    return redirect('/content-management-systems')
+  }
+}
+</script>

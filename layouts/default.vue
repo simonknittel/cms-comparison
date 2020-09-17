@@ -1,5 +1,7 @@
 <template>
   <div>
+    <Wip />
+
     <Header />
 
     <Navigation />

@@ -1,3 +1,11 @@
+<h1 align="center">cms-comparison</h1>
+
+<div align="center">
+  <p>Unopinionated comparison of content management systems, shop systems, etc.</p>
+  <hr>
+  <p>⚠ <strong>Work in progress!</p>
+</div>
+
 # cms-comparison
 
 ## Build Setup

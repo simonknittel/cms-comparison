@@ -23,7 +23,11 @@ rest_api:
   text: Yes, built-in
   source: https://developer.wordpress.org/rest-api/
 graphql:
-  text: No, only via plugin
+  text: No, but available via plugin
   source: https://www.wpgraphql.com/
 image_transformations:
   text: On upload, defined by the used theme
+2fa:
+  text: No, but available via plugin
+image_upload:
+  text: Yes, built-in

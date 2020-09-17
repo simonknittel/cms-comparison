@@ -14,3 +14,11 @@ hosting:
 plugin_store:
   text: plugins.craftcms.com
   url: https://plugins.craftcms.com/
+framework:
+  text: Yii 2
+  source: https://craftcms.com/docs/3.x/
+database:
+  text: MySQL, MariaDB, PostgreSQL
+  source: https://craftcms.com/docs/3.x/
+image_upload:
+  text: Yes, built-in

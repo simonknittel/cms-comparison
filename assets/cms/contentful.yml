@@ -11,7 +11,7 @@ programming_language:
 database:
   text: Not applicable
 2fa:
-  text: Built-in
+  text: Yes, built-in
   source: https://www.contentful.com/security/
 framework:
   text: Not applicable

@@ -76,7 +76,7 @@ export default {
   padding: .5rem;
 
   background-color: hsla(180, 25%, 50%, .1);
-  color: hsla(0, 0%, 0%, .3);
+  color: hsla(0, 0%, 0%, .4);
 
   font-size: .8rem;
   line-height: 1.2;

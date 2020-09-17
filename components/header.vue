@@ -16,5 +16,6 @@
     text-align: center;
     font-weight: normal;
   }
+
 }
 </style>

@@ -3,3 +3,7 @@ homepage:
   url: https://wordpress.com/
 hosting:
   text: Cloud service
+framework:
+  text: Not applicable
+database:
+  text: Not applicable
