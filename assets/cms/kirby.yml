@@ -13,7 +13,7 @@ database:
   source: https://getkirby.com/docs/guide/content/introduction
 framework:
   text: No framework used
-extandable:
+extendable:
   text: Via plugins
 plugin_store:
   text: getkirby.com/plugins

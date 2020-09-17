@@ -21,3 +21,5 @@ graphql:
 rest_api:
   text: No
   source: https://www.datocms.com/docs/content-delivery-api
+custom_themes:
+  text: Not applicable since it's a headless CMS

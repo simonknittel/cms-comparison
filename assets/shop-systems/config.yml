@@ -5,6 +5,12 @@ categories:
     title: Pricing
   hosting:
     title: Hosting
+  product_ratings:
+    title: Product ratings
+  coupons:
+    title: Coupons
+  stock_management:
+    title: Stock management
 systems:
   magento:
     title: Magento

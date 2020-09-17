@@ -7,3 +7,5 @@ hosting:
   text: Cloud service
 database:
   text: Not applicable
+programming_language:
+  text: Not applicable

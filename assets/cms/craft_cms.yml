@@ -22,3 +22,5 @@ database:
   source: https://craftcms.com/docs/3.x/
 image_upload:
   text: Yes, built-in
+extendable:
+  text: Via plugins

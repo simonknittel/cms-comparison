@@ -10,7 +10,7 @@ programming_language:
 database:
   text: Doctrine (MySQL, MariaDB, PostgreSQL, SQL Server, ...)
   source: https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/Database/Introduction/Index.html
-extandable:
+extendable:
   text: Via extensions
   source: https://typo3.org/cms/features/open-extensible-customizable
 plugin_store:

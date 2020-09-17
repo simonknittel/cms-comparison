@@ -9,7 +9,7 @@ programming_language:
   text: PHP
 database:
   text: MySQL, MariaDB
-extandable:
+extendable:
   text: Via plugins
   source: https://wordpress.org/support/article/managing-plugins/
 plugin_store:
@@ -31,3 +31,9 @@ image_transformations:
   text: No, but available via plugin
 image_upload:
   text: Yes, built-in
+comments:
+  text: Yes, built-in
+  source: https://wordpress.org/support/article/comments-in-wordpress/
+custom_themes:
+  text: Yes, built-in
+  source: https://wordpress.org/support/article/using-themes/
