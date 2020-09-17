@@ -33,6 +33,8 @@ categories:
     title: Image upload
   image_transformations:
     title: Image transformations
+  comment_system:
+    title: Comment system
 systems:
   contentful:
     title: Contentful
