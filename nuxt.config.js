@@ -63,5 +63,8 @@ export default {
         use: 'yaml-loader'
       })
     }
+  },
+  router: {
+    base: process.env.NODE_ENV === 'production' ? '/cms-comparison/' : ''
   }
 }
