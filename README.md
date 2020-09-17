@@ -3,10 +3,8 @@
 <div align="center">
   <p>Unopinionated comparison of content management systems, shop systems, etc.</p>
   <hr>
-  <p>⚠ <strong>Work in progress!</p>
+  <p>⚠ <em>Work in progress!</em></p>
 </div>
-
-# cms-comparison
 
 ## Build Setup
 
