@@ -26,5 +26,5 @@ custom_themes:
 search:
   text: No, needs to be implemented manually
 enterprise_support:
-  text: Yes
+  text: Available
   source: https://strapi.io/enterprise

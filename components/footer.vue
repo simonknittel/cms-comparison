@@ -1,6 +1,8 @@
 <template>
   <footer class="footer">
     <p>Contribute on <a href="https://github.com/simonknittel/cms-comparison" target="_blank" rel="noopener">GitHub</a></p>
+
+    <small>All product names and logos are property of their respective owners.</small>
   </footer>
 </template>
 

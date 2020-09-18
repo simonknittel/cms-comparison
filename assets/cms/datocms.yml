@@ -26,3 +26,5 @@ custom_themes:
 i18n_pages:
   text: Yes, built-in
   source: https://www.datocms.com/features/multi-language
+comments:
+  text: No, needs to be implemented manually

@@ -9,7 +9,7 @@ graphql:
 rest_api:
   text: No
 enterprise_support:
-  text: Yes
+  text: Available
   source: https://graphcms.com/enterprise-headless-cms
 hosting:
   text: Cloud service
@@ -18,3 +18,9 @@ custom_themes:
 content_versioning:
   text: Yes, built-in
   source: https://graphcms.com/docs/guides/concepts/versioning
+programming_language:
+  text: Not applicable
+database:
+  text: Not applicable
+framework:
+  text: Not applicable
