@@ -1,0 +1,20 @@
+pricing:
+  text: Several plans available (including a free one)
+  source: https://graphcms.com/pricing
+homepage:
+  text: graphcms.com
+  url: https://graphcms.com/
+graphql:
+  text: Yes, built-in
+rest_api:
+  text: No
+enterprise_support:
+  text: Yes
+  source: https://graphcms.com/enterprise-headless-cms
+hosting:
+  text: Cloud service
+custom_themes:
+  text: Not applicable since it's a headless CMS
+content_versioning:
+  text: Yes, built-in
+  source: https://graphcms.com/docs/guides/concepts/versioning

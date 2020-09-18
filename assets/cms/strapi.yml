@@ -23,3 +23,8 @@ comments:
   source: https://github.com/VirtusLab/strapi-plugin-comments
 custom_themes:
   text: Not applicable since it's a headless CMS
+search:
+  text: No, needs to be implemented manually
+enterprise_support:
+  text: Yes
+  source: https://strapi.io/enterprise

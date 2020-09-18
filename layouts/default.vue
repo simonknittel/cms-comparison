@@ -1,17 +1,10 @@
 <template>
   <div>
     <Wip />
-
     <Header />
-
     <Navigation />
-
     <Nuxt />
-
-    <small class="hint">Uses developer specific keywords</small>
-
     <Instructions />
-
     <Footer />
   </div>
 </template>
@@ -51,15 +44,6 @@ html {
 
 .cms {
   margin-top: 2rem;
-}
-
-.hint {
-  display: block;
-
-  margin-top: 1rem;
-
-  font-size: .9rem;
-  text-align: center;
 }
 
 .instructions {

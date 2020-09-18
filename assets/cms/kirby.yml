@@ -14,7 +14,14 @@ database:
 framework:
   text: No framework used
 extendable:
-  text: Via plugins
+  text: Via plugins or custom code
 plugin_store:
   text: getkirby.com/plugins
   url: https://getkirby.com/plugins
+rest_api:
+  text: Yes, built-in
+  source: https://getkirby.com/docs/guide/api/introduction
+2fa:
+  text: No, needs to be implemented manually
+graphql:
+  text: No, needs to be implemented manually

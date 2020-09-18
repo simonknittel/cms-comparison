@@ -26,3 +26,5 @@ rest_api:
   source: https://www.contentful.com/developers/docs/references/content-delivery-api/
 custom_themes:
   text: Not applicable since it's a headless CMS
+comments:
+  text: No, needs to be implemented manually

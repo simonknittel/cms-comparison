@@ -7,8 +7,12 @@ categories:
     title: Hosting
   product_ratings:
     title: Product ratings
-  coupons:
-    title: Coupons
+  percentage_coupons:
+    title: Discount by a percentage
+  fixed_amount_coupons:
+    title: Discount by a fixed amount
+  max_usages_coupons:
+    title: Limit max usages of coupons
   stock_management:
     title: Stock management
 systems:

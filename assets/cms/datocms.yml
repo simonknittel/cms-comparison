@@ -23,3 +23,6 @@ rest_api:
   source: https://www.datocms.com/docs/content-delivery-api
 custom_themes:
   text: Not applicable since it's a headless CMS
+i18n_pages:
+  text: Yes, built-in
+  source: https://www.datocms.com/features/multi-language

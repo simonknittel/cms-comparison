@@ -3,28 +3,28 @@ categories:
     title: Homepage
   pricing:
     title: Pricing
-  hosting:
-    title: Hosting
-  programming_language:
-    title: Programming language
-  database:
-    title: Database
-  2fa:
-    title: 2FA
-  custom_themes:
-    title: Custom themes
+  enterprise_support:
+    title: Enterprise support
   extendable:
     title: Extendable
   plugin_store:
     title: Plugin store
-  enterprise_support:
-    title: Enterprise support
+  custom_themes:
+    title: Custom themes
+  hosting:
+    title: Hosting
+  programming_language:
+    title: Programming language
   framework:
     title: Framework
+  database:
+    title: Database
   scheduled_publishing:
     title: Scheduled publishing
   signup_confirmation_email:
     title: Singup confirmation email
+  2fa:
+    title: 2FA
   rest_api:
     title: REST API
   graphql:
@@ -35,21 +35,36 @@ categories:
     title: Image transformations
   comments:
     title: Comments
+  i18n_pages:
+    title: Translations per page
+  i18n_site_tree:
+    title: Customizable site tree per translation
+  search:
+    title: Search
+  review_workflow:
+    title: Review workflow for editors
+  content_versioning:
+    title: Versioning for content
 systems:
   contentful:
     title: Contentful
+    logo: contentful.svg
   craft_cms:
     title: Craft CMS
   datocms:
     title: DatoCMS
   ghost:
     title: Ghost
+  graphcms:
+    title: GraphCMS
+    logo: graphcms.svg
   grav:
     title: Grav
   kirby:
     title: Kirby
   squarespace:
     title: Squarespace
+    logo: squarespace.svg
   strapi:
     title: Strapi
   typo3:

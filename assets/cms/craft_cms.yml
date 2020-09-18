@@ -23,4 +23,4 @@ database:
 image_upload:
   text: Yes, built-in
 extendable:
-  text: Via plugins
+  text: Via plugins or custom code

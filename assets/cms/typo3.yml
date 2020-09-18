@@ -11,7 +11,7 @@ database:
   text: Doctrine (MySQL, MariaDB, PostgreSQL, SQL Server, ...)
   source: https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/Database/Introduction/Index.html
 extendable:
-  text: Via extensions
+  text: Via extensions or custom code
   source: https://typo3.org/cms/features/open-extensible-customizable
 plugin_store:
   text: extensions.typo3.org
