@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{207:function(o){o.exports=JSON.parse('{"homepage":{"text":"woocommerce.com","url":"https://woocommerce.com/"},"pricing":{"text":"Free"}}')}}]);
