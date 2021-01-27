@@ -1,1 +1,0 @@
-window.__NUXT__={staticAssetsBase:"\u002Fcms-comparison\u002F_nuxt\u002Fstatic\u002F1611769678",layout:"default",error:null,state:{filters:{overlayVisible:false,disabledSystems:[]}},serverRendered:true,routePath:"\u002Fcontent-management-systems",config:{}};
