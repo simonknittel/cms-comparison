@@ -51,6 +51,8 @@ categories:
     title: Authentication mechanism
 
 systems:
+  adobe_experience_manager:
+    title: Adobe Experience Manager
   contentful:
     title: Contentful
     logo: contentful.svg
@@ -70,6 +72,8 @@ systems:
   squarespace:
     title: Squarespace
     logo: squarespace.svg
+  statamic:
+    title: Statamic
   strapi:
     title: Strapi
   typo3:
@@ -82,7 +86,3 @@ systems:
     logo: wordpress.png
   wordpresscom:
     title: WordPress.com
-  statamic:
-    title: Statamic
-  adobe_experience_manager:
-    title: Adobe Experience Manager
