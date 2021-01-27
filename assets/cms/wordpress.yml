@@ -40,3 +40,9 @@ custom_themes:
 search:
   text: Yes, built-in
   source: https://codex.wordpress.org/Creating_a_Search_Page
+signup_confirmation_email:
+  text: Yes, built-in
+emails_via_extensions:
+  text: Yes, built-in (via PHPMailer)
+authentication_mechanisms:
+  text: Session stored in cookies

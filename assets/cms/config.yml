@@ -23,6 +23,8 @@ categories:
     title: Scheduled publishing
   signup_confirmation_email:
     title: Singup confirmation email
+  emails_via_extensions:
+    title: Sending emails via custom extensions
   2fa:
     title: 2FA
   rest_api:
@@ -45,6 +47,9 @@ categories:
     title: Review workflow for editors
   content_versioning:
     title: Versioning for content
+  authentication_mechanism:
+    title: Authentication mechanism
+
 systems:
   contentful:
     title: Contentful
