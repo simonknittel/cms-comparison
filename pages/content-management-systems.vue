@@ -5,7 +5,7 @@
         <table>
           <thead>
             <tr>
-              <th></th>
+              <th><button @click="toggleOverlay">Filters</button></th>
 
               <th v-for="system in systems" :key="system.id">
                 <img
@@ -15,12 +15,14 @@
                 >
 
                 <span v-else>{{ system.title }}</span>
+
+                <button @click="() => { disableSystem(system) }">X</button>
               </th>
             </tr>
           </thead>
 
           <tbody>
-            <tr v-for="category in categories" :key="category">
+            <tr v-for="category in categories" :key="category.id">
               <th>
                 <span>{{ category.title }}</span>
               </th>
@@ -37,11 +39,14 @@
         </table>
       </div>
     </div>
+
+    <Filters v-if="overlayVisible" />
   </main>
 </template>
 
 <script>
-import { categories, systems } from '~/assets/cms/config.yml'
+import { categories, systems } from '../assets/cms/config.yml'
+import { mapMutations } from 'vuex';
 
 const initialSystemData = {}
 for (const system in systems) {
@@ -52,15 +57,6 @@ for (const system in systems) {
 export default {
   name: 'ContentManagementSystems',
   data() {
-    const systemsArray = []
-    for (const system in systems) {
-      if (!systems.hasOwnProperty(system)) continue
-      systemsArray.push({
-        id: system,
-        ...systems[system]
-      })
-    }
-
     const categoriesArray = []
     for (const category in categories) {
       if (!categories.hasOwnProperty(category)) continue
@@ -72,7 +68,6 @@ export default {
 
     return {
       categories: categoriesArray,
-      systems: systemsArray,
       systemData: initialSystemData
     }
   },
@@ -85,6 +80,27 @@ export default {
           this.systemData[system] = yml.default ? yml.default : {}
         })
     }
+  },
+  methods: {
+    ...mapMutations({
+      toggleOverlay: 'filters/toggleOverlay',
+      disableSystem: 'filters/disableSystem'
+    })
+  },
+  computed: {
+    systems() {
+      const systemsArray = []
+      for (const system in systems) {
+        if (!systems.hasOwnProperty(system)) continue
+        if (this.$store.state.filters.disabledSystems.includes(system)) continue
+        systemsArray.push({
+          id: system,
+          ...systems[system]
+        })
+      }
+      return systemsArray
+    },
+    overlayVisible() { return this.$store.state.filters.overlayVisible }
   }
 }
 </script>
