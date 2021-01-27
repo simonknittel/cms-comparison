@@ -82,3 +82,7 @@ systems:
     logo: wordpress.png
   wordpresscom:
     title: WordPress.com
+  statamic:
+    title: Statamic
+  adobe_experience_manager:
+    title: Adobe Experience Manager
