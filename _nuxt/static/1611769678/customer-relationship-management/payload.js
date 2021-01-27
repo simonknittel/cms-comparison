@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/customer-relationship-management", {data:[{}],fetch:[],mutations:[]});
