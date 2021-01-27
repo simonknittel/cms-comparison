@@ -7,7 +7,7 @@
             <tr>
               <th><button @click="toggleOverlay">Filters</button></th>
 
-              <th v-for="system in systems" :key="system.id">
+              <th class="column-head" v-for="system in systems" :key="system.id">
                 <img
                   v-if="system.logo"
                   :src="require(`../assets/logos/${system.logo}`)"
@@ -16,7 +16,7 @@
 
                 <span v-else>{{ system.title }}</span>
 
-                <button @click="() => { disableSystem(system) }">X</button>
+                <button class="column-head__x" @click="() => { disableSystem(system) }" title="Hide column">X</button>
               </th>
             </tr>
           </thead>
@@ -222,4 +222,40 @@ td {
     background-color: hsla(180, 25%, 50%, .1);
   }
 }
+
+.column-head {
+  position: relative;
+
+  &__x {
+    opacity: 0;
+    transition: opacity .2s;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+    width: 2rem;
+    height: 2rem;
+    padding: .5;
+
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color: #40bfbf;
+    color: #fff;
+  }
+
+  &:hover {
+    .column-head__x {
+      opacity: 1;
+    }
+  }
+}
+
 </style>
