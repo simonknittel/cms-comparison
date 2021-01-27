@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{210:function(o){o.exports=JSON.parse('{"homepage":{"text":"shopware.com","url":"https://www.shopware.com/"}}')}}]);
