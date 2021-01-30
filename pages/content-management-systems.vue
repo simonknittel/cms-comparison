@@ -10,7 +10,7 @@
               </th>
 
               <ColumnHead
-                v-for="system in systems"
+                v-for="system in visibleSystems"
                 :key="system.id"
 
                 :title="system.title"
@@ -21,17 +21,17 @@
           </thead>
 
           <tbody>
-            <tr v-for="category in categories" :key="category.id">
+            <tr v-for="category in $store.state.cms.categories" :key="category.id">
               <RowHead
                 :title="category.title"
               />
 
               <Cell
-                v-for="system in systems"
+                v-for="system in visibleSystems"
                 :key="system.id"
 
-                :systemData="systemData[system.id]"
-                :category="category.id"
+                :system="system"
+                :categoryId="category.id"
               />
             </tr>
           </tbody>
@@ -44,44 +44,12 @@
 </template>
 
 <script>
-import { categories, systems } from '../assets/cms/config.yml'
 import { mapMutations } from 'vuex';
-
-const initialSystemData = {}
-for (const system in systems) {
-  if (!systems.hasOwnProperty(system)) continue
-  initialSystemData[system] = {}
-}
 
 export default {
   name: 'ContentManagementSystems',
   head: {
     title: 'Content Management Systems (CMS)',
-  },
-  data() {
-    const categoriesArray = []
-    for (const category in categories) {
-      if (!categories.hasOwnProperty(category)) continue
-      categoriesArray.push({
-        id: category,
-        title: categories[category].title
-      })
-    }
-
-    return {
-      categories: categoriesArray,
-      systemData: initialSystemData
-    }
-  },
-  created() {
-    for (const system in systems) {
-      if (!systems.hasOwnProperty(system)) continue
-
-      import(`~/assets/cms/${system}.yml`)
-        .then(yml => {
-          this.systemData[system] = yml.default ? yml.default : {}
-        })
-    }
   },
   methods: {
     ...mapMutations({
@@ -89,17 +57,16 @@ export default {
     })
   },
   computed: {
-    systems() {
-      const systemsArray = []
-      for (const system in systems) {
-        if (!systems.hasOwnProperty(system)) continue
-        if (this.$store.state.filters.disabledSystems.includes(system)) continue
-        systemsArray.push({
-          id: system,
-          ...systems[system]
-        })
+    visibleSystems() {
+      const visibleSystems = []
+
+      for (const [ id, system ] of Object.entries(this.$store.state.cms.systems)) {
+        if (this.$store.state.filters.disabledSystems.includes(id)) continue
+
+        visibleSystems.push(system)
       }
-      return systemsArray
+
+      return visibleSystems
     },
     overlayVisible() { return this.$store.state.filters.overlayVisible }
   }

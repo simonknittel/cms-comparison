@@ -1,21 +1,21 @@
 <template>
-  <td class="cell">
-    <div v-if="Object.keys(systemData).length" class="cell__inner">
-      <div v-if="systemData[category]">
-        <div v-if="category === 'homepage' || category === 'plugin_store'">
+  <td>
+    <div v-if="Object.keys(system).length">
+      <div v-if="system[categoryId]">
+        <div v-if="categoryId === 'homepage' || categoryId === 'plugin_store'">
           <a
-            :href="systemData[category].url"
+            :href="system[categoryId].url"
             target="_blank"
             rel="noopener"
-          >{{ systemData[category].text }}</a>
+          >{{ system[categoryId].text }}</a>
         </div>
 
         <div v-else>
-          {{ systemData[category].text }}
+          {{ system[categoryId].text }}
 
           <a
-            v-if="systemData[category].source"
-            :href="systemData[category].source"
+            v-if="system[categoryId].source"
+            :href="system[categoryId].source"
             target="_blank"
             rel="noopener"
             class="source"
@@ -40,22 +40,16 @@
 <script>
 export default {
   props: {
-    systemData: {
-      type: Object
-    },
-    category: {
-      type: String
-    }
+    system: Object,
+    categoryId: String
   }
 }
 </script>
 
-<style lang="scss">
-.cell {
+<style lang="scss" scoped>
+td {
   position: relative;
   padding: .5rem;
-
-  &__inner {}
 }
 
 .source {
