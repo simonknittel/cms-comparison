@@ -1,31 +1,30 @@
 <template>
-  <main class="cms">
+  <main>
     <div class="table-wrapper">
       <div class="table-wrapper__inner">
         <table>
           <thead>
             <tr>
-              <th><button @click="toggleOverlay">Filters</button></th>
-
-              <th class="column-head" v-for="system in systems" :key="system.id">
-                <img
-                  v-if="system.logo"
-                  :src="require(`../assets/logos/${system.logo}`)"
-                  :alt="'Logo of ' + system.title"
-                >
-
-                <span v-else>{{ system.title }}</span>
-
-                <button class="column-head__x" @click="() => { disableSystem(system) }" :title="'Hide ' + system.title">X</button>
+              <th>
+                <button @click="toggleOverlay">Filters</button>
               </th>
+
+              <ColumnHead
+                v-for="system in systems"
+                :key="system.id"
+
+                :title="system.title"
+                :id="system.id"
+                :logo="system.logo"
+              />
             </tr>
           </thead>
 
           <tbody>
             <tr v-for="category in categories" :key="category.id">
-              <th>
-                <span>{{ category.title }}</span>
-              </th>
+              <RowHead
+                :title="category.title"
+              />
 
               <Cell
                 v-for="system in systems"
@@ -87,7 +86,6 @@ export default {
   methods: {
     ...mapMutations({
       toggleOverlay: 'filters/toggleOverlay',
-      disableSystem: 'filters/disableSystem'
     })
   },
   computed: {
@@ -113,7 +111,7 @@ export default {
 @import '../assets/scss/box-shadow';
 @import '../assets/scss/closing-button';
 
-.cms {
+main {
   margin-left: 1rem;
   margin-right: 1rem;
   font-size: .9rem;
@@ -178,23 +176,8 @@ table {
 
 thead {
   th {
-    width: 12rem;
-    max-height: 5rem;
-
-    vertical-align: center;
-
     &:first-of-type {
       width: 9rem;
-
-      span {
-        border-bottom: none;
-      }
-    }
-
-    img {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
     }
   }
 }
@@ -202,10 +185,6 @@ thead {
 tbody {
   th, td {
     vertical-align: top;
-  }
-
-  th {
-    text-align: left;
   }
 }
 
@@ -230,41 +209,4 @@ td {
     background-color: hsla(180, 25%, 50%, .1);
   }
 }
-
-.column-head {
-  position: relative;
-
-  &__x {
-    @include closing-button();
-    opacity: 0;
-    transition: opacity .2s;
-
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-
-    width: 2rem;
-    height: 2rem;
-    padding: .5;
-
-    outline: none;
-    border: none;
-    border-radius: 50%;
-    background-color: $accent;
-    color: $white;
-  }
-
-  &:hover {
-    .column-head__x {
-      opacity: 1;
-    }
-  }
-}
-
 </style>

@@ -38,9 +38,9 @@ export default {
   methods: {
     onChange(e, system) {
       if (e.currentTarget.checked) {
-        this.$store.commit('filters/disableSystem', system)
+        this.$store.commit('filters/disableSystem', system.id)
       } else {
-        this.$store.commit('filters/enableSystem', system)
+        this.$store.commit('filters/enableSystem', system.id)
       }
     },
     ...mapMutations({

@@ -6,12 +6,12 @@ export function state() {
 }
 
 export const mutations = {
-  enableSystem(state, system) {
-    state.disabledSystems.splice(state.disabledSystems.indexOf(system.id))
+  enableSystem(state, id) {
+    state.disabledSystems.splice(state.disabledSystems.indexOf(id))
   },
-  disableSystem(state, system) {
-    if (!state.disabledSystems.includes(system.id)) {
-      state.disabledSystems.push(system.id)
+  disableSystem(state, id) {
+    if (!state.disabledSystems.includes(id)) {
+      state.disabledSystems.push(id)
     }
   },
   toggleOverlay(state) {
