@@ -31,3 +31,6 @@ enterprise_support:
 authentication_mechanism:
   text: JWT (without refresh token)
   source: https://strapi.io/documentation/developer-docs/latest/guides/auth-request.html#introduction
+emails_via_extensions:
+  text: No, but plugin available
+  source: https://strapi.io/documentation/developer-docs/latest/plugins/email.html#programmatic-usage

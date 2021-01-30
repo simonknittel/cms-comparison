@@ -11,12 +11,12 @@
                 <img
                   v-if="system.logo"
                   :src="require(`../assets/logos/${system.logo}`)"
-                  :alt="system.title"
+                  :alt="'Logo of ' + system.title"
                 >
 
                 <span v-else>{{ system.title }}</span>
 
-                <button class="column-head__x" @click="() => { disableSystem(system) }" title="Hide column">X</button>
+                <button class="column-head__x" @click="() => { disableSystem(system) }" :title="'Hide ' + system.title">X</button>
               </th>
             </tr>
           </thead>
@@ -56,6 +56,9 @@ for (const system in systems) {
 
 export default {
   name: 'ContentManagementSystems',
+  head: {
+    title: 'Content Management Systems (CMS)',
+  },
   data() {
     const categoriesArray = []
     for (const category in categories) {
@@ -106,6 +109,10 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/scss/colors';
+@import '../assets/scss/box-shadow';
+@import '../assets/scss/closing-button';
+
 .cms {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -113,9 +120,10 @@ export default {
 }
 
 .table-wrapper {
+  @include box-shadow();
+
   position: relative;
-  box-shadow: 3px 3px 5px 0 hsla(0, 0%, 0%, .05);
-  background-color: #fff;
+  background-color: $white;
 
   // &::before {
   //   content: '';
@@ -227,6 +235,7 @@ td {
   position: relative;
 
   &__x {
+    @include closing-button();
     opacity: 0;
     transition: opacity .2s;
 
@@ -247,8 +256,8 @@ td {
     outline: none;
     border: none;
     border-radius: 50%;
-    background-color: #40bfbf;
-    color: #fff;
+    background-color: $accent;
+    color: $white;
   }
 
   &:hover {

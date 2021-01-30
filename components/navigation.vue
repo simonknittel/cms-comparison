@@ -1,20 +1,22 @@
 <template>
   <nav class="nav">
-    <NuxtLink to="/content-management-systems" class="nav__item">
+    <NuxtLink to="/content-management-systems" class="nav__item" title="Show comparison for Content Management Systems (CMS)">
       <span class="nav__item__inner">Content Management Systems (CMS)</span>
     </NuxtLink>
 
-    <NuxtLink to="/shop-systems" class="nav__item">
+    <!-- <NuxtLink to="/shop-systems" class="nav__item" title="Show comparison for Shop Systems">
       <span class="nav__item__inner">Shop Systems</span>
-    </NuxtLink>
+    </NuxtLink> -->
 
-    <!-- <NuxtLink to="/customer-relationship-management" class="nav__item">
+    <!-- <NuxtLink to="/customer-relationship-management" class="nav__item" title="Show comparison for Customer Relationship Management (CMR)">
       <span class="nav__item__inner">Customer Relationship Management (CRM)</span>
     </NuxtLink> -->
   </nav>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import '../assets/scss/colors';
+
 .nav {
   display: flex;
   justify-content: center;
@@ -42,7 +44,7 @@
       font-weight: bold;
 
       .nav__item__inner {
-        border-bottom: 2px solid hsl(180, 50%, 50%);
+        border-bottom: 2px solid $accent;
       }
     }
   }

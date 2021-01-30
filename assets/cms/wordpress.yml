@@ -44,5 +44,5 @@ signup_confirmation_email:
   text: Yes, built-in
 emails_via_extensions:
   text: Yes, built-in (via PHPMailer)
-authentication_mechanisms:
+authentication_mechanism:
   text: Session stored in cookies

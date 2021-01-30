@@ -1,14 +1,18 @@
 <template>
-  <section class="filters-overlay">
-    <button @click="hideOverlay">X</button>
+  <div>
+    <div class="overlay">
+      <button class="x" @click="hideOverlay" title="Close filters">X</button>
 
-    <h2>Show/hide</h2>
+      <h2>Show/hide</h2>
 
-    <label class="filters-system" v-for="system in systems" :key="system.id">
-      <input type="checkbox" @change="(e) => { onChange(e, system) }" :checked="system.disabled">
-      {{ system.title }}
-    </label>
-  </section>
+      <label class="label" v-for="system in systems" :key="system.id">
+        <input type="checkbox" @change="(e) => { onChange(e, system) }" :checked="system.disabled">
+        {{ system.title }}
+      </label>
+    </div>
+
+    <div class="background" @click="hideOverlay"></div>
+  </div>
 </template>
 
 <script>
@@ -46,8 +50,27 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.filters-overlay {
+<style lang="scss" scoped>
+@import '../assets/scss/box-shadow';
+@import '../assets/scss/closing-button';
+@import '../assets/scss/colors';
+
+.background {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.overlay {
+  @include box-shadow();
+
+  z-index: 2;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -62,10 +85,18 @@ export default {
   padding: 2rem;
 
   border-radius: 3px;
-  background-color: #fff;
+  background-color: $white;
 }
 
-.filters-system {
+.label {
   display: block;
+}
+
+.x {
+  @include closing-button();
+
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
 }
 </style>

@@ -44,7 +44,10 @@ for (const system in systems) {
 }
 
 export default {
-  name: 'ContentManagementSystems',
+  name: 'ShopSystems',
+    head: {
+    title: 'Shop Systems',
+  },
   data() {
     const systemsArray = []
     for (const system in systems) {

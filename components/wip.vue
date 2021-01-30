@@ -1,12 +1,14 @@
 <template>
-  <div class="wip">⚠ work in progress</div>
+  <div>⚠ work in progress</div>
 </template>
 
-<style lang="scss">
-.wip {
+<style lang="scss" scoped>
+@import '../assets/scss/colors.scss';
+
+div {
   padding: 1rem;
 
-  background-color: #efd400;
+  background-color: $warning;
 
   text-align: center;
   font-size: 1rem;

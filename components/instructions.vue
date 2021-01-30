@@ -5,16 +5,20 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import '../assets/scss/box-shadow';
+@import '../assets/scss/colors';
+
 .instructions {
+  @include box-shadow();
+
   width: 100%;
   max-width: 60rem;
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
 
-  box-shadow: 3px 3px 5px 0 hsla(0, 0%, 0%, .05);
-  background-color: #fff;
+  background-color: $white;
 
   font-size: .9rem;
   line-height: 1.5;
