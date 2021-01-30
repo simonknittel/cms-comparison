@@ -12,7 +12,8 @@
     "nuxt": "2.14.12"
   },
   "devDependencies": {
-    "node-sass": "5.0.0",
+    "fibers": "5.0.0",
+    "sass": "1.32.5",
     "sass-loader": "10.1.0",
     "yaml-loader": "0.6.0"
   }

@@ -51,9 +51,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/scss/box-shadow';
-@import '../assets/scss/closing-button';
-@import '../assets/scss/colors';
+@use '../assets/scss/box-shadows';
+@use '../assets/scss/colors';
+@use '../assets/scss/closing-buttons';
 
 .background {
   z-index: 1;
@@ -68,7 +68,7 @@ export default {
 }
 
 .overlay {
-  @include box-shadow();
+  @include box-shadows.default;
 
   z-index: 2;
   position: fixed;
@@ -85,7 +85,7 @@ export default {
   padding: 2rem;
 
   border-radius: 3px;
-  background-color: $white;
+  background-color: colors.$white;
 }
 
 .label {
@@ -93,7 +93,7 @@ export default {
 }
 
 .x {
-  @include closing-button();
+  @include closing-buttons.default;
 
   position: absolute;
   right: 2rem;

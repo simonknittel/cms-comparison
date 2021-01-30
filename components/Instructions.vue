@@ -6,11 +6,11 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/scss/box-shadow';
-@import '../assets/scss/colors';
+@use '../assets/scss/box-shadows';
+@use '../assets/scss/colors';
 
 .instructions {
-  @include box-shadow();
+  @include box-shadows.default;
 
   width: 100%;
   max-width: 60rem;
@@ -18,7 +18,7 @@
   margin-right: auto;
   padding: 1rem;
 
-  background-color: $white;
+  background-color: colors.$white;
 
   font-size: .9rem;
   line-height: 1.5;

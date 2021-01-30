@@ -35,8 +35,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/scss/colors';
-@import '../assets/scss/closing-button';
+@use '../assets/scss/colors';
+@use '../assets/scss/closing-buttons';
 
 th {
   position: relative;
@@ -60,7 +60,7 @@ img {
 }
 
 .x {
-  @include closing-button();
+  @include closing-buttons.default;
 
   opacity: 0;
   transition: opacity .1s;
@@ -82,7 +82,7 @@ img {
   outline: none;
   border: none;
   border-radius: 50%;
-  background-color: $accent;
-  color: $white;
+  background-color: colors.$accent;
+  color: colors.$white;
 }
 </style>

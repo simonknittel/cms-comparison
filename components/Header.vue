@@ -5,16 +5,16 @@
 </template>
 
 <style lang="scss">
-@import '../assets/scss/box-shadow';
-@import '../assets/scss/colors';
+@use '../assets/scss/box-shadows';
+@use '../assets/scss/colors';
 
 header {
-  @include box-shadow();
+  @include box-shadows.default;
 
   padding-top: 2rem;
   padding-bottom: 2rem;
 
-  background-color: $white;
+  background-color: colors.$white;
 }
 
 h1 {

@@ -3,12 +3,12 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/scss/colors.scss';
+@use '../assets/scss/colors.scss';
 
 div {
   padding: 1rem;
 
-  background-color: $warning;
+  background-color: colors.$warning;
 
   text-align: center;
   font-size: 1rem;

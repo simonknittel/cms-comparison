@@ -15,7 +15,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/scss/colors';
+@use '../assets/scss/colors';
 
 .nav {
   display: flex;
@@ -44,7 +44,7 @@
       font-weight: bold;
 
       .nav__item__inner {
-        border-bottom: 2px solid $accent;
+        border-bottom: 2px solid colors.$accent;
       }
     }
   }

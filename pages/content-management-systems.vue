@@ -74,9 +74,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/scss/colors';
-@import '../assets/scss/box-shadow';
-@import '../assets/scss/closing-button';
+@use '../assets/scss/box-shadows';
+@use '../assets/scss/colors';
 
 main {
   margin-left: 1rem;
@@ -85,10 +84,10 @@ main {
 }
 
 .table-wrapper {
-  @include box-shadow();
+  @include box-shadows.default;
 
   position: relative;
-  background-color: $white;
+  background-color: colors.$white;
 
   // &::before {
   //   content: '';

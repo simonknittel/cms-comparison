@@ -1,0 +1,31 @@
+@use './box-shadows';
+@use './colors';
+
+@mixin default {
+  @include box-shadows.default;
+
+  $size: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: $size;
+  height: $size;
+  padding: .5;
+
+  border: none;
+  border-radius: 50%;
+  background-color: colors.$accent;
+  color: colors.$white;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: lighten(colors.$accent, 10);
+  }
+
+  &:active {
+    background-color: darken(colors.$accent, 10);
+  }
+}
