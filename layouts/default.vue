@@ -37,20 +37,4 @@ html {
 
   background-color: hsla(180, 50%, 50% , .05);
 }
-
-.nav {
-  margin-top: 2rem;
-}
-
-.cms {
-  margin-top: 2rem;
-}
-
-.instructions {
-  margin-top: 4rem;
-}
-
-.footer {
-  margin-top: 4rem;
-}
 </style>

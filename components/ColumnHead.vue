@@ -55,6 +55,7 @@ th {
 
 img {
   width: 90%;
+  max-height: 10rem;
   margin-left: auto;
   margin-right: auto;
 }

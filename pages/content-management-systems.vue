@@ -3,73 +3,22 @@
     <div class="table-wrapper">
       <div class="table-wrapper__inner">
         <table>
-          <thead>
-            <tr>
-              <th>
-                <button @click="toggleOverlay">Filters</button>
-              </th>
-
-              <ColumnHead
-                v-for="system in visibleSystems"
-                :key="system.id"
-
-                :title="system.title"
-                :id="system.id"
-                :logo="system.logo"
-              />
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr v-for="category in $store.state.cms.categories" :key="category.id">
-              <RowHead
-                :title="category.title"
-              />
-
-              <Cell
-                v-for="system in visibleSystems"
-                :key="system.id"
-
-                :system="system"
-                :categoryId="category.id"
-              />
-            </tr>
-          </tbody>
+          <TableHead />
+          <TableBody />
         </table>
       </div>
     </div>
 
-    <Filters v-if="overlayVisible" />
+    <Filters v-if="$store.state.filters.overlayVisible" />
   </main>
 </template>
 
 <script>
-import { mapMutations } from 'vuex';
-
 export default {
   name: 'ContentManagementSystems',
   head: {
     title: 'Content Management Systems (CMS)',
   },
-  methods: {
-    ...mapMutations({
-      toggleOverlay: 'filters/toggleOverlay',
-    })
-  },
-  computed: {
-    visibleSystems() {
-      const visibleSystems = []
-
-      for (const [ id, system ] of Object.entries(this.$store.state.cms.systems)) {
-        if (this.$store.state.filters.disabledSystems.includes(id)) continue
-
-        visibleSystems.push(system)
-      }
-
-      return visibleSystems
-    },
-    overlayVisible() { return this.$store.state.filters.overlayVisible }
-  }
 }
 </script>
 
@@ -80,6 +29,7 @@ export default {
 main {
   margin-left: 1rem;
   margin-right: 1rem;
+  margin-top: 2rem;
   font-size: .9rem;
 }
 
@@ -138,20 +88,6 @@ table {
   padding: 0 1rem 1rem 1rem;
 
   line-height: 1.5;
-}
-
-thead {
-  th {
-    &:first-of-type {
-      width: 9rem;
-    }
-  }
-}
-
-tbody {
-  th, td {
-    vertical-align: top;
-  }
 }
 
 th {

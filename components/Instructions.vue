@@ -16,6 +16,7 @@
   max-width: 60rem;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 4rem;
   padding: 1rem;
 
   background-color: colors.$white;
