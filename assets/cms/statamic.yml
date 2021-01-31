@@ -17,3 +17,7 @@ plugin_store:
 rest_api:
   text: Yes, built-in
   source: https://statamic.dev/content-api
+database:
+  text: Flat-file, Laravel Eloquent
+framework:
+  text: Laravel

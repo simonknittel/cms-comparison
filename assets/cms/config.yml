@@ -60,15 +60,19 @@ systems:
     logo: contentful.svg
   craft_cms:
     title: Craft CMS
+    logo: craft_cms.svg
   datocms:
     title: DatoCMS
+    logo: datocms.svg
   ghost:
     title: Ghost
+    logo: ghost.png
   graphcms:
     title: GraphCMS
     logo: graphcms.svg
   grav:
     title: Grav
+    logo: grav.svg
   kirby:
     title: Kirby
   squarespace:
@@ -76,8 +80,10 @@ systems:
     logo: squarespace.svg
   statamic:
     title: Statamic
+    logo: statamic.svg
   strapi:
     title: Strapi
+    logo: strapi.svg
   typo3:
     title: TYPO3
     logo: typo3.png
