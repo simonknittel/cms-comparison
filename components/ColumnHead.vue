@@ -42,7 +42,7 @@ th {
   position: relative;
 
   width: 12rem;
-  max-height: 5rem;
+  height: 5rem;
 
   vertical-align: middle;
 
@@ -54,8 +54,9 @@ th {
 }
 
 img {
-  width: 90%;
-  max-height: 10rem;
+  max-width: 80%;
+  max-height: 80%;
+
   margin-left: auto;
   margin-right: auto;
 }

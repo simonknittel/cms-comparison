@@ -48,3 +48,5 @@ authentication_mechanism:
   text: Session stored in cookies
 content_types:
   text: Blog posts and pages are built-in. Custom content types are available via plugins
+content_versioning:
+  text: Yes, built-in

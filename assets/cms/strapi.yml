@@ -36,3 +36,5 @@ emails_via_extensions:
   source: https://strapi.io/documentation/developer-docs/latest/plugins/email.html#programmatic-usage
 content_types:
   text: None built-in content types. Custom content types are available via custom code or the web ui.
+extendable:
+  text: Via custom code
