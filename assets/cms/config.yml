@@ -49,6 +49,8 @@ categories:
     title: Versioning for content
   authentication_mechanism:
     title: Authentication mechanism
+  content_types:
+    title: Content types
 
 systems:
   adobe_experience_manager:

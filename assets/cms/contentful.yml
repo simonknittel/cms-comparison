@@ -28,3 +28,5 @@ custom_themes:
   text: Not applicable since it's a headless CMS
 comments:
   text: No, needs to be implemented manually
+content_types:
+  text: None built-in content types. Custom content types are available via web ui.

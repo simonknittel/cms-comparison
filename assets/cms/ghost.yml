@@ -13,3 +13,5 @@ database:
 framework:
   text: Express.js
   source: https://github.com/TryGhost/Ghost/blob/master/package.json
+content_types:
+  text: Blog posts and pages are built-in.

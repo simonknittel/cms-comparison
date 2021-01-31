@@ -34,3 +34,5 @@ authentication_mechanism:
 emails_via_extensions:
   text: No, but plugin available
   source: https://strapi.io/documentation/developer-docs/latest/plugins/email.html#programmatic-usage
+content_types:
+  text: None built-in content types. Custom content types are available via custom code or the web ui.
