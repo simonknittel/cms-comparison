@@ -1,7 +1,7 @@
 <template>
   <nav>
     <NuxtLink to="/content-management-systems" class="item" title="Show comparison for Content Management Systems (CMS)">
-      <span class="inner">Content Management Systems (CMS)</span>
+      <h2 class="inner">Content Management Systems (CMS)</h2>
     </NuxtLink>
 
     <!-- <NuxtLink to="/shop-systems" class="item" title="Show comparison for Shop Systems">
@@ -50,5 +50,6 @@ nav {
   display: inline-block;
   padding-bottom: .25rem;
   border-bottom: 2px solid hsla(180, 25%, 50%, .3);
+  font-size: 1rem;
 }
 </style>

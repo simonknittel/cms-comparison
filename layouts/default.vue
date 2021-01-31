@@ -4,7 +4,7 @@
     <Header />
     <Navigation />
     <Nuxt />
-    <Instructions />
+    <!-- <Instructions /> -->
     <Footer />
   </div>
 </template>

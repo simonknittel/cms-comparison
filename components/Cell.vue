@@ -23,7 +23,7 @@
         </div>
       </div>
 
-      <a v-else class="missing" href="">
+      <a v-else class="missing" href="" rel="nofollow">
         <span>
           Missing data.<br>
           Click here to contribute.
