@@ -56,7 +56,7 @@ export default {
 @use '../assets/scss/closing-buttons';
 
 .background {
-  z-index: 1;
+  z-index: 3;
   position: fixed;
   left: 0;
   right: 0;
@@ -64,13 +64,13 @@ export default {
   bottom: 0;
 
   backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, .2);
+  background-color: rgba(0, 0, 0, .2);
 }
 
 .overlay {
   @include box-shadows.default;
 
-  z-index: 2;
+  z-index: 4;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -96,7 +96,8 @@ export default {
   @include closing-buttons.default;
 
   position: absolute;
-  right: 2rem;
+  right: 0rem;
   top: 2rem;
+  transform: translateX(50%);
 }
 </style>

@@ -6,6 +6,8 @@
 
   $size: 2rem;
 
+  cursor: pointer;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +17,7 @@
   padding: .5;
 
   border: none;
-  border-radius: 50%;
+  border-radius: .25rem;
   background-color: colors.$accent;
   color: colors.$white;
 

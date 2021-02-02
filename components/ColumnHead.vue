@@ -8,7 +8,7 @@
 
     <span v-else>{{ title }}</span>
 
-    <button class="x" @click.prevent="onClick" :title="'Hide ' + title">X</button>
+    <button class="x" @click.prevent="onClick" :title="'Hide ' + title">Hide {{ title }}</button>
   </th>
 </template>
 
@@ -39,6 +39,7 @@ export default {
 @use '../assets/scss/closing-buttons';
 
 th {
+  z-index: 2;
   position: relative;
 
   height: 5rem;
@@ -64,24 +65,11 @@ img {
   opacity: 0;
   transition: opacity .1s;
 
-  cursor: pointer;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
 
-  width: 2rem;
-  height: 2rem;
-  padding: .5;
-
-  outline: none;
-  border: none;
-  border-radius: 50%;
-  background-color: colors.$accent;
-  color: colors.$white;
+  width: auto;
 }
 </style>
