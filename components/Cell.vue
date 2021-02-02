@@ -23,12 +23,12 @@
         </div>
       </div>
 
-      <button v-else class="missing">
+      <!-- <button v-else class="missing">
         <span>
           Missing data.<br>
           Click here to contribute.
         </span>
-      </button>
+      </button> -->
     </div>
 
     <small v-else>
@@ -58,30 +58,30 @@ td {
   color: hsla(0, 0%, 0%, .3);
 }
 
-.missing {
-  opacity: 0;
-  display: flex;
+// .missing {
+//   opacity: 0;
+//   display: flex;
 
-  position: absolute;
-  left: .5rem;
-  top: .5rem;
-  bottom: .5rem;
+//   position: absolute;
+//   left: .5rem;
+//   top: .5rem;
+//   bottom: .5rem;
 
-  width: calc(100% - 1rem);
-  padding: .5rem;
+//   width: calc(100% - 1rem);
+//   padding: .5rem;
 
-  border: none;
-  background-color: hsla(0, 0%, 0%, .05);
-  color: hsla(0, 0%, 0%, .4);
+//   border: none;
+//   background-color: hsla(0, 0%, 0%, .05);
+//   color: hsla(0, 0%, 0%, .4);
 
-  font-size: .8rem;
-  line-height: 1.2;
-  text-decoration: none;
-  text-align: left;
+//   font-size: .8rem;
+//   line-height: 1.2;
+//   text-decoration: none;
+//   text-align: left;
 
-  &:hover {
-    cursor: pointer;
-    opacity: 1;
-  }
-}
+//   &:hover {
+//     cursor: pointer;
+//     opacity: 1;
+//   }
+// }
 </style>
