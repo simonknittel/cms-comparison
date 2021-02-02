@@ -49,7 +49,7 @@ export default {
 <style lang="scss" scoped>
 td {
   position: relative;
-  padding: .5rem;
+  padding: 1rem;
 }
 
 .source {
@@ -60,6 +60,7 @@ td {
 
 .missing {
   opacity: 0;
+  display: flex;
 
   position: absolute;
   left: .5rem;
@@ -70,7 +71,7 @@ td {
   padding: .5rem;
 
   border: none;
-  background-color: hsla(180, 25%, 50%, .1);
+  background-color: hsla(0, 0%, 0%, .05);
   color: hsla(0, 0%, 0%, .4);
 
   font-size: .8rem;
@@ -79,6 +80,7 @@ td {
   text-align: left;
 
   &:hover {
+    cursor: pointer;
     opacity: 1;
   }
 }

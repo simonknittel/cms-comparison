@@ -18,14 +18,13 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/colors';
-@use '../assets/scss/sizes';
 
 th {
   z-index: 1;
   position: sticky;
   left: 0;
 
-  width: sizes.$column-width;
+  padding: 1rem;
 
   box-shadow: 2px 0 5px -3px hsla(0, 0%, 0%, .2);
   background-color: colors.$white;

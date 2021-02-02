@@ -37,15 +37,11 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/colors';
 @use '../assets/scss/closing-buttons';
-@use '../assets/scss/sizes';
 
 th {
   position: relative;
 
-  width: sizes.$column-width;
   height: 5rem;
-
-  vertical-align: middle;
 
   &:hover {
     .x {

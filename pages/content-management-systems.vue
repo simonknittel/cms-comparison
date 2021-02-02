@@ -64,18 +64,4 @@ table {
 
   line-height: 1.5;
 }
-
-th {
-  padding: .5rem;
-}
-
-td {
-  &:nth-of-type(odd) {
-    background-color: hsla(180, 25%, 50%, .05);
-  }
-
-  &:nth-of-type(even) {
-    background-color: hsla(180, 25%, 50%, .1);
-  }
-}
 </style>
