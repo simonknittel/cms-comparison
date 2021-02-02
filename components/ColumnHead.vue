@@ -37,11 +37,12 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/colors';
 @use '../assets/scss/closing-buttons';
+@use '../assets/scss/sizes';
 
 th {
   position: relative;
 
-  width: 12rem;
+  width: sizes.$column-width;
   height: 5rem;
 
   vertical-align: middle;
@@ -54,8 +55,8 @@ th {
 }
 
 img {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 50%;
+  max-height: 50%;
 
   margin-left: auto;
   margin-right: auto;

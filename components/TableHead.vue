@@ -38,11 +38,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-thead {
-  th {
-    &:first-of-type {
-      width: 9rem;
-    }
+tr {
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 5px -3px hsla(0, 0%, 0%, .2);
+}
+
+th {
+  &:first-of-type {
+    width: 9rem;
   }
 }
 </style>

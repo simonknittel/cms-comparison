@@ -30,9 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-tbody {
-  th, td {
-    vertical-align: top;
-  }
+th, td {
+  vertical-align: top;
 }
 </style>
