@@ -6,15 +6,9 @@
 
 <style lang="scss">
 @use '../assets/scss/box-shadows';
-@use '../assets/scss/colors';
 
 header {
-  @include box-shadows.default;
-
   padding-top: 2rem;
-  padding-bottom: 2rem;
-
-  background-color: colors.$white;
 }
 
 h1 {
