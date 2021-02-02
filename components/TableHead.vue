@@ -1,7 +1,7 @@
 <template>
   <thead>
     <tr>
-      <th>
+      <th class="first">
         <button @click="toggleOverlay">Filters</button>
       </th>
 
@@ -38,6 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use '../assets/scss/colors';
 @use '../assets/scss/sizes';
 
 th {
@@ -48,5 +49,14 @@ tr {
   position: sticky;
   top: 0;
   box-shadow: 0 2px 5px -3px hsla(0, 0%, 0%, .2);
+}
+
+.first {
+  z-index: 3;
+  position: sticky;
+  left: 0;
+
+  box-shadow: 2px 0 5px -3px hsla(0, 0%, 0%, .2);
+  background-color: colors.$white;
 }
 </style>

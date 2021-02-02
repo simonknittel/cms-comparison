@@ -20,7 +20,7 @@ export default {
 @use '../assets/scss/colors';
 
 th {
-  z-index: 1;
+  z-index: 3;
   position: sticky;
   left: 0;
 

@@ -55,7 +55,7 @@ main {
 }
 
 .table-wrapper__inner::-webkit-scrollbar-thumb {
-  background-color: hsla(180, 25%, 50%, .3);
+  background-color: colors.$accent;
 }
 
 table {
