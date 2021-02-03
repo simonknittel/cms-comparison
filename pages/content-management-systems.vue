@@ -62,6 +62,7 @@ table {
   table-layout: fixed;
   width: 100%;
 
+  border-spacing: 0;
   line-height: 1.5;
 }
 </style>
