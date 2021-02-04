@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[22],{192:function(e){e.exports=JSON.parse('{"homepage":{"text":"wordpress.com","url":"https://wordpress.com/"},"hosting":{"text":"Cloud service"},"framework":{"text":"Not applicable"},"database":{"text":"Not applicable"},"programming_language":{"text":"Not applicable"}}')}}]);

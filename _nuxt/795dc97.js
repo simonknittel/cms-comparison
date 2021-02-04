@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[23],{230:function(o){o.exports=JSON.parse('{"homepage":{"text":"magento.com","url":"https://magento.com/"}}')}}]);
