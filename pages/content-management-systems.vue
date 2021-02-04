@@ -27,29 +27,37 @@ export default {
 @use '../assets/scss/colors';
 
 main {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-top: 2rem;
+  $outer-spacing: 1rem;
+
+  position: absolute;
+  left: $outer-spacing;
+  right: $outer-spacing;
+  top: 6rem;
+  bottom: $outer-spacing;
+
   font-size: .9rem;
 }
 
 .table-wrapper {
   @include box-shadows.default;
 
-  position: relative;
+  height: 100%;
   background-color: colors.$white;
 }
 
 .table-wrapper__inner {
-  overflow-x: auto;
+  overflow: scroll;
+  height: 100%;
 }
 
 .table-wrapper__inner::-webkit-scrollbar-track {
+  width: .3rem;
   height: .3rem;
   background-color: transparent;
 }
 
 .table-wrapper__inner::-webkit-scrollbar {
+  width: .3rem;
   height: .3rem;
   background-color: transparent;
 }

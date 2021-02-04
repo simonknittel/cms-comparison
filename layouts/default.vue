@@ -1,15 +1,16 @@
 <template>
   <div>
-    <Wip />
+    <!-- <Wip /> -->
     <Header />
-    <Navigation />
     <Nuxt />
     <!-- <Instructions /> -->
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
 
-<style>
+<style lang="scss">
+@use '../assets/scss/colors';
+
 *,
 *::before,
 *::after {
@@ -36,5 +37,19 @@ html {
   box-sizing: border-box;
 
   background-color: hsla(180, 50%, 50% , .05);
+}
+
+html::-webkit-scrollbar-track {
+  width: .3rem;
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar {
+  width: .3rem;
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: colors.$accent;
 }
 </style>

@@ -40,9 +40,13 @@ export default {
 
 th {
   z-index: 2;
-  position: relative;
+  position: sticky;
+  top: 0;
 
   height: 5rem;
+
+  box-shadow: 0 2px 5px -3px hsla(0, 0%, 0%, .2);
+  background-color: colors.$white;
 
   &:hover {
     .x {

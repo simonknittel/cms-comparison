@@ -29,6 +29,7 @@ export default {
   },
   computed: {
     visibleSystems() {
+      // TODO: Sort
       return Object.values(this.$store.state.cms.systems).filter(({ id }) => {
         return this.$store.state.filters.disabledSystems.includes(id) ? false : true
       })
@@ -45,18 +46,13 @@ th {
   width: sizes.$column-width;
 }
 
-tr {
-  position: sticky;
-  top: 0;
-  box-shadow: 0 2px 5px -3px hsla(0, 0%, 0%, .2);
-}
-
 .first {
-  z-index: 3;
+  z-index: 4;
   position: sticky;
   left: 0;
+  top: 0;
 
-  box-shadow: 2px 0 5px -3px hsla(0, 0%, 0%, .2);
+  box-shadow: 0 0 5px 0 hsla(0, 0%, 0%, .2);
   background-color: colors.$white;
 }
 </style>

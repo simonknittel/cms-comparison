@@ -1,6 +1,8 @@
 <template>
   <header>
-    <h1>Unopinionated comparison of ...</h1>
+    <h1>Unopinionated comparison of</h1>
+
+    <Navigation />
   </header>
 </template>
 
@@ -8,11 +10,19 @@
 @use '../assets/scss/box-shadows';
 
 header {
-  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 6rem;
 }
 
 h1 {
-  text-align: center;
-  font-weight: normal;
+  font-size: 1.5rem;
 }
 </style>
