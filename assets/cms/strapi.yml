@@ -37,4 +37,4 @@ emails_via_extensions:
 content_types:
   text: None built-in content types. Custom content types are available via custom code or the web ui.
 extendable:
-  text: Via custom code
+  text: Via plugins or custom code

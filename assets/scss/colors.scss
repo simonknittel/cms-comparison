@@ -1,3 +1,6 @@
+@use 'sass:color';
+
 $accent: hsl(180, 50%, 50%);
+$accent-light: color.adjust($accent, $lightness: 47%);
 $warning: hsl(53, 100%, 50%);
 $white: #fff;

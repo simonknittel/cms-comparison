@@ -47,8 +47,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use '../assets/scss/sizes';
+
 td {
   position: relative;
+  width: sizes.$column-width;
   padding: 1rem;
 }
 

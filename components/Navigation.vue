@@ -43,7 +43,9 @@ nav {
 
   &:hover {
     .inner {
-      border-bottom: 2px solid colors.$accent;
+      &::after {
+        background-color: colors.$accent;
+      }
     }
   }
 
@@ -51,7 +53,9 @@ nav {
     font-weight: bold;
 
     .inner {
-      border-bottom: 2px solid colors.$accent;
+      &::after {
+        background-color: colors.$accent;
+      }
     }
   }
 
@@ -64,9 +68,22 @@ nav {
 
 .inner {
   display: inline-block;
-  padding-bottom: .25rem;
-  border-bottom: 2px solid hsla(180, 25%, 50%, .3);
+
+  position: relative;
+
   font-size: 1.5rem;
+  line-height: 1.5rem;
   font-weight: normal;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: calc(100% + .5rem);
+
+    width: 100%;
+    height: 2px;
+    background-color: hsla(180, 25%, 50%, .3);
+  }
 }
 </style>

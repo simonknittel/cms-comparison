@@ -5,12 +5,6 @@ categories:
     title: Pricing
   enterprise_support:
     title: Enterprise support
-  extendable:
-    title: Extendable
-  plugin_store:
-    title: Plugin store
-  custom_themes:
-    title: Custom themes
   hosting:
     title: Hosting
   programming_language:
@@ -21,34 +15,55 @@ categories:
     title: Database
   scheduled_publishing:
     title: Scheduled publishing
-  signup_confirmation_email:
-    title: Singup confirmation email
-  emails_via_extensions:
-    title: Sending emails via custom extensions
-  2fa:
-    title: 2FA
-  rest_api:
-    title: REST API
-  graphql:
-    title: GraphQL
-  image_upload:
-    title: Image upload
-  image_transformations:
-    title: Image transformations
+  extendibility:
+    title: Extendibility
+    children:
+      extendable:
+        title: Extendable
+      plugin_store:
+        title: Extension/Plugin store
+      custom_themes:
+        title: Custom themes
+      emails_via_extensions:
+        title: Sending emails via custom extensions
+  authentication:
+    title: Authentication
+    children:
+      signup_confirmation_email:
+        title: Singup confirmation email
+      authentication_mechanism:
+        title: Authentication mechanism
+      2fa:
+        title: 2FA
+  apis:
+    title: APIs
+    children:
+      rest_api:
+        title: REST API
+      graphql:
+        title: GraphQL
+  media:
+    title: Media
+    children:
+      image_upload:
+        title: Image upload
+      image_transformations:
+        title: Image transformations
   comments:
     title: Comments
-  i18n_pages:
-    title: Translations per page
-  i18n_site_tree:
-    title: Customizable site tree per translation
+  i18n:
+    title: i18n
+    children:
+      i18n_pages:
+        title: Translations per page
+      i18n_site_tree:
+        title: Customizable site tree per translation
   search:
     title: Search
   review_workflow:
     title: Review workflow for editors
   content_versioning:
     title: Versioning for content
-  authentication_mechanism:
-    title: Authentication mechanism
   content_types:
     title: Content types
 

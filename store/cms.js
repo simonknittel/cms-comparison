@@ -17,9 +17,26 @@ for (const [ id, system ] of Object.entries(systems)) {
 const populatedCategories = {}
 
 for (const [ id, category ] of Object.entries(categories)) {
-  populatedCategories[id] = {
-    id,
-    ...category,
+  if (category.children) {
+    const children = {}
+
+    for (const [ childId, child ] of Object.entries(category.children)) {
+      children[childId] = {
+        id: childId,
+        ...child
+      }
+    }
+
+    populatedCategories[id] = {
+      id,
+      title: category.title,
+      children,
+    }
+  } else {
+    populatedCategories[id] = {
+      id,
+      ...category,
+    }
   }
 }
 
