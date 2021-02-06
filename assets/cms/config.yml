@@ -15,6 +15,16 @@ categories:
     title: Database
   scheduled_publishing:
     title: Scheduled publishing
+  search:
+    title: Search
+  review_workflow:
+    title: Review workflow for editors
+  content_versioning:
+    title: Versioning for content
+  content_types:
+    title: Content types
+  comments:
+    title: Comments
   extendibility:
     title: Extendibility
     children:
@@ -49,8 +59,6 @@ categories:
         title: Image upload
       image_transformations:
         title: Image transformations
-  comments:
-    title: Comments
   i18n:
     title: i18n
     children:
@@ -58,14 +66,6 @@ categories:
         title: Translations per page
       i18n_site_tree:
         title: Customizable site tree per translation
-  search:
-    title: Search
-  review_workflow:
-    title: Review workflow for editors
-  content_versioning:
-    title: Versioning for content
-  content_types:
-    title: Content types
 
 systems:
   adobe_experience_manager:

@@ -29,10 +29,13 @@ export default {
   },
   computed: {
     visibleSystems() {
-      // TODO: Sort
-      return Object.values(this.$store.state.cms.systems).filter(({ id }) => {
+      const visible = Object.values(this.$store.state.cms.systems).filter(({ id }) => {
         return this.$store.state.filters.disabledSystems.includes(id) ? false : true
       })
+
+      const sorted = visible.sort((a, b) => a.title.localeCompare(b.title))
+
+      return sorted
     },
   },
 }

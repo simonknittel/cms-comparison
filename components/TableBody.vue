@@ -47,10 +47,13 @@ export default {
   name: 'TableBody',
   computed: {
     visibleSystems() {
-      // TODO: Sort
-      return Object.values(this.$store.state.cms.systems).filter(({ id }) => {
+      const visible = Object.values(this.$store.state.cms.systems).filter(({ id }) => {
         return this.$store.state.filters.disabledSystems.includes(id) ? false : true
       })
+
+      const sorted = visible.sort((a, b) => a.title.localeCompare(b.title))
+
+      return sorted
     },
   },
 }
@@ -59,12 +62,10 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/colors';
 @use '../assets/scss/sizes';
+@use '../assets/scss/utils';
 
 table {
-  table-layout: fixed;
-  width: 100%;
-
-  border-spacing: 0;
+  @include utils.table-reset;
   line-height: 1.5;
 }
 
