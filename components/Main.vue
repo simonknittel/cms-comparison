@@ -19,7 +19,7 @@
 @use '../assets/scss/utils';
 
 main {
-  $outer-spacing: 1rem;
+  $outer-spacing: 0;
 
   position: absolute;
   left: $outer-spacing;
@@ -28,6 +28,14 @@ main {
   bottom: $outer-spacing;
 
   font-size: .9rem;
+
+  @media (min-width: 40rem) {
+    $outer-spacing: 1rem;
+
+    left: $outer-spacing;
+    right: $outer-spacing;
+    bottom: $outer-spacing;
+  }
 }
 
 .table-wrapper {

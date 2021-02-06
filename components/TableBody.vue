@@ -91,8 +91,14 @@ th, td {
   position: sticky;
   left: 0;
 
-  padding: 1rem;
+  padding: .5rem;
 
   font-weight: bold;
+  font-size: .8rem;
+
+  @media (min-width: 40rem) {
+    padding: 1rem;
+    font-size: 1rem;
+  }
 }
 </style>

@@ -26,20 +26,24 @@
 @use '../assets/scss/colors';
 
 nav {
-  display: flex;
+  @media (min-width: 40rem) {
+    display: flex;
+  }
 }
 
 .item {
-  display: inline-block;
-
-  margin-left: .5rem;
-  margin-right: .5rem;
+  display: block;
 
   border-radius: 3px;
 
   color: #000;
 
   text-decoration: none;
+
+  @media (min-width: 40rem) {
+    margin-left: .5rem;
+    margin-right: .5rem;
+  }
 
   &:hover {
     .inner {
@@ -71,9 +75,14 @@ nav {
 
   position: relative;
 
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1rem;
   font-weight: normal;
+
+  @media (min-width: 40rem) {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
 
   &::after {
     content: '';

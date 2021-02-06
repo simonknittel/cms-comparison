@@ -26,10 +26,16 @@ th {
   left: 0;
 
   width: sizes.$column-width;
-  padding: 1rem;
+  padding: .5rem;
 
   box-shadow: 2px 0 5px -3px hsla(0, 0%, 0%, .2);
   background-color: colors.$white;
   text-align: left;
+  font-size: .8rem;
+
+  @media (min-width: 40rem) {
+    padding: 1rem;
+    font-size: 1rem;
+  }
 }
 </style>

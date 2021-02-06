@@ -52,7 +52,11 @@ export default {
 td {
   position: relative;
   width: sizes.$column-width;
-  padding: 1rem;
+  padding: .5rem;
+
+  @media (min-width: 40rem) {
+    padding: 1rem;
+  }
 }
 
 .source {
