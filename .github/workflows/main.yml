@@ -16,10 +16,9 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install and Build
-        run: |
-          npm ci
-          npm run generate
+      - run: npm ci
+
+      - run: npm run generate
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
