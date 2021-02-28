@@ -90,6 +90,10 @@ systems:
     logo: grav.svg
   kirby:
     title: Kirby
+  payload_cms:
+    title: Payload CMS
+  prismic:
+    title: Prismic
   squarespace:
     title: Squarespace
     logo: squarespace.svg
