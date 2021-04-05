@@ -21,7 +21,7 @@ jobs:
       - run: npm run generate
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           BRANCH: gh-pages
           FOLDER: dist
