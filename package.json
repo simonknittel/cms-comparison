@@ -9,7 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "2.15.3"
+    "nuxt": "2.15.4"
   },
   "devDependencies": {
     "fibers": "5.0.0",
