@@ -5,6 +5,7 @@
         <button class="filters-button" @click="toggleOverlay">
           <FilterIcon />
           Filters
+          <span class="filters-count" v-if="filtersCount">({{ filtersCount }})</span>
         </button>
       </th>
 
@@ -45,6 +46,10 @@ export default {
 
       return visible.sort((a, b) => a.title.localeCompare(b.title))
     },
+
+    filtersCount() {
+      return this.$store.state.filters.disabledSystems.length
+    }
   },
 }
 </script>
@@ -78,5 +83,9 @@ th {
     width: .8rem;
     height: .8rem;
   }
+}
+
+.filters-count {
+  margin-left: .5em;
 }
 </style>

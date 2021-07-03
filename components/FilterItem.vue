@@ -1,5 +1,8 @@
 <template>
-  <label class="label">
+  <label :class="{
+    label: true,
+    'is-child': isChild
+  }">
     <input class="checkbox" type="checkbox" @change="onChange" :checked="disabled">
     <span class="fake-checkbox"></span>
     {{ title }}
@@ -18,6 +21,9 @@ export default {
       type: Boolean,
       required: true
     },
+    isChild: {
+      type: Boolean,
+    },
     onChange: {
       type: Function,
       required: true
@@ -29,6 +35,8 @@ export default {
 <style scoped lang="scss">
 @use '../assets/scss/colors';
 
+
+
 .label {
   display: block;
   position: relative;
@@ -38,6 +46,11 @@ export default {
 
   &:hover {
     cursor: pointer;
+  }
+
+  &.is-child {
+    --checkbox-size: 1.5rem;
+    margin-left: calc(var(--checkbox-size) + .9rem);
   }
 }
 
@@ -54,9 +67,9 @@ export default {
   display: inline-block;
   vertical-align: middle;
 
-  --size: 1.5rem;
-  width: var(--size);
-  height: var(--size);
+  --checkbox-size: 1.5rem;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
 
   margin-right: .5rem;
 

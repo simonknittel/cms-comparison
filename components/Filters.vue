@@ -8,24 +8,45 @@
         Close
       </button>
 
-      <h2 class="heading">Filters</h2>
-      <p class="description">Select a checkbox to hide individual columns and rows</p>
+      <div class="inner">
+        <h2 class="heading">Filters</h2>
+        <p class="description">Select a checkbox to hide individual columns and rows</p>
 
-      <h3 class="subheading">Columns</h3>
+        <div class="grid">
+          <div class="left">
+            <h3 class="subheading">Columns</h3>
 
-      <div class="column-list">
-        <FilterItem
-          v-for="system in systems"
-          :key="system.id"
+            <div class="column-list">
+              <FilterItem
+                v-for="system in systems"
+                :key="system.id"
 
-          :title="system.title"
-          :disabled="system.disabled"
+                :title="system.title"
+                :disabled="system.disabled"
 
-          :onChange="(e) => { onChange(e, system.id) }"
-        />
+                :onChange="(e) => { onChange(e, system.id) }"
+              />
+            </div>
+          </div>
+
+          <div class="right">
+            <h3 class="subheading">Rows</h3>
+
+            <div class="column-list">
+              <FilterItem
+                v-for="category in categories"
+                :key="category.id"
+
+                :title="category.title"
+                :disabled="false"
+                :isChild="category.isChild"
+
+                :onChange="() => {}"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-
-      <h3 class="subheading">Rows</h3>
     </div>
   </div>
 </template>
@@ -44,22 +65,42 @@ export default {
 
   computed: {
     systems() {
-      const systemsArray = []
-      for (const system in systems) {
-        if (!systems.hasOwnProperty(system)) continue
-        systemsArray.push({
-          id: system,
-          disabled: this.$store.state.filters.disabledSystems.includes(system),
-          ...systems[system]
+      const array = []
+
+      for (const [systemId, system] of Object.entries(systems)) {
+        array.push({
+          id: systemId,
+          disabled: this.$store.state.filters.disabledSystems.includes(systemId),
+          ...system
         })
       }
-      return systemsArray
+
+      return array
     },
 
     keymap () {
       return {
         'esc': this.hideOverlay,
       }
+    },
+
+    categories() {
+      const array = []
+
+      for (const category of Object.values(this.$store.state.cms.categories)) {
+        array.push(category)
+
+        if (!category.children) continue;
+
+        for (const child of Object.values(category.children)) {
+          array.push({
+            isChild: true,
+            ...child
+          })
+        }
+      }
+
+      return array
     },
   },
 
@@ -74,7 +115,7 @@ export default {
     ...mapMutations({
       hideOverlay: 'filters/hideOverlay'
     })
-  }
+  },
 }
 </script>
 
@@ -107,7 +148,6 @@ export default {
 .overlay {
   @include box-shadows.default;
 
-
   z-index: 1;
   position: relative;
 
@@ -115,17 +155,39 @@ export default {
   margin-right: auto;
   margin-top: 5rem;
 
-  width: 36rem;
+  width: 62rem;
   max-width: 95vw;
 
   height: calc(100% - 10rem);
-
-  padding: 2rem;
 
   border-radius: 3px;
   border: 1px solid colors.$accent;
   background-color: colors.$white;
 }
+
+.inner {
+  overflow: auto;
+  height: 100%;
+  padding: 2rem;
+}
+
+/*
+.inner::-webkit-scrollbar-track {
+  width: .3rem;
+  height: .3rem;
+  background-color: transparent;
+}
+
+.inner::-webkit-scrollbar {
+  width: .3rem;
+  height: .3rem;
+  background-color: transparent;
+}
+
+.inner::-webkit-scrollbar-thumb {
+  background-color: colors.$accent;
+}
+*/
 
 .heading {}
 
@@ -133,9 +195,17 @@ export default {
   margin-top: .5rem;
 }
 
-.subheading {
-  margin-top: 1rem;
+.grid {
+  display: flex;
+  margin-top: 2rem;
 }
+
+.left,
+.right {
+  width: 50%;
+}
+
+.subheading {}
 
 .column-list {
   margin-top: .5rem;

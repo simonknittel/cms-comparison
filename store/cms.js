@@ -12,6 +12,9 @@ for (const [ id, system ] of Object.entries(systems)) {
 
       if (yml.default) Object.assign(populatedSystems[id], yml.default)
     })
+    .catch(error => {
+      console.error(error)
+    })
 }
 
 const populatedCategories = {}

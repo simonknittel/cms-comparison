@@ -9,14 +9,16 @@ export const mutations = {
   enableSystem(state, id) {
     state.disabledSystems.splice(state.disabledSystems.indexOf(id))
   },
+
   disableSystem(state, id) {
-    if (!state.disabledSystems.includes(id)) {
-      state.disabledSystems.push(id)
-    }
+    if (state.disabledSystems.includes(id)) return
+    state.disabledSystems.push(id)
   },
+
   toggleOverlay(state) {
     state.overlayVisible = !state.overlayVisible
   },
+
   hideOverlay(state) {
     state.overlayVisible = false
   }
