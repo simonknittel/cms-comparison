@@ -3,7 +3,8 @@
     <div class="overlay">
       <button class="x" @click="hideOverlay" title="Close filters">X</button>
 
-      <h2>Show/hide</h2>
+      <h2>Filters</h2>
+      <p>Show or hide individual columns and rows</p>
 
       <label class="label" v-for="system in systems" :key="system.id">
         <input type="checkbox" @change="(e) => { onChange(e, system) }" :checked="system.disabled">
@@ -53,7 +54,7 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/box-shadows';
 @use '../assets/scss/colors';
-@use '../assets/scss/closing-buttons';
+@use '../assets/scss/buttons';
 
 .background {
   z-index: 5;
@@ -64,7 +65,7 @@ export default {
   bottom: 0;
 
   backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(255, 255, 255, .2);
 }
 
 .overlay {
@@ -93,7 +94,7 @@ export default {
 }
 
 .x {
-  @include closing-buttons.default;
+  @include buttons.closing;
 
   position: absolute;
   right: 0rem;

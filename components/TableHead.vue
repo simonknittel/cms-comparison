@@ -2,7 +2,7 @@
   <thead>
     <tr>
       <th class="first">
-        <button @click="toggleOverlay">Filters</button>
+        <button class="filters-button" @click="toggleOverlay">Filters</button>
       </th>
 
       <ColumnHead
@@ -33,9 +33,7 @@ export default {
         return this.$store.state.filters.disabledSystems.includes(id) ? false : true
       })
 
-      const sorted = visible.sort((a, b) => a.title.localeCompare(b.title))
-
-      return sorted
+      return visible.sort((a, b) => a.title.localeCompare(b.title))
     },
   },
 }
@@ -44,6 +42,7 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/colors';
 @use '../assets/scss/sizes';
+@use '../assets/scss/buttons';
 
 th {
   width: sizes.$column-width;
@@ -57,5 +56,11 @@ th {
 
   box-shadow: 0 0 5px 0 hsla(0, 0%, 0%, .2);
   background-color: colors.$white;
+}
+
+.filters-button {
+  @include buttons.default;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>

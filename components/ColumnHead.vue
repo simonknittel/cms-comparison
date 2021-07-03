@@ -36,7 +36,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/colors';
-@use '../assets/scss/closing-buttons';
+@use '../assets/scss/buttons';
 
 th {
   z-index: 2;
@@ -64,7 +64,7 @@ img {
 }
 
 .x {
-  @include closing-buttons.default;
+  @include buttons.default;
 
   opacity: 0;
   transition: opacity .1s;
@@ -73,7 +73,5 @@ img {
   left: 50%;
   top: 100%;
   transform: translate(-50%, -50%);
-
-  width: auto;
 }
 </style>

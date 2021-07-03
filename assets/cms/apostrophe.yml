@@ -24,3 +24,8 @@ plugin_store:
   url: https://apostrophecms.com/extensions
 extendable:
   text: Via plugins or custom code
+rest_api:
+  text: Yes, built-in
+  source: https://v3.docs.apostrophecms.org/reference/api/
+graphql:
+  text: No

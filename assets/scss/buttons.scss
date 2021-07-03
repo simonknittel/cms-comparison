@@ -4,17 +4,13 @@
 @mixin default {
   @include box-shadows.default;
 
-  $size: 2rem;
-
   cursor: pointer;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: $size;
-  height: $size;
-  padding: .5;
+  padding: .5rem;
 
   border: none;
   border-radius: .25rem;
@@ -30,4 +26,12 @@
   &:active {
     background-color: darken(colors.$accent, 10);
   }
+}
+
+@mixin closing {
+  @include default;
+
+  $size: 2rem;
+  width: $size;
+  height: $size;
 }
