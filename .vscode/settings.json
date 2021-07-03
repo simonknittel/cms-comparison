@@ -3,5 +3,8 @@
     "ahmadnassri",
     "dependabot",
     "nuxt"
-  ]
+  ],
+  "sonarlint.connectedMode.project": {
+    "projectKey": "simonknittel_cms-comparison"
+  }
 }

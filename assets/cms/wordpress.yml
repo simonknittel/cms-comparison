@@ -1,5 +1,5 @@
 pricing:
-  text: Free
+  text: Free (Open Source)
 homepage:
   text: wordpress.org
   url: https://wordpress.org
@@ -50,3 +50,5 @@ content_types:
   text: Blog posts and pages are built-in. Custom content types are available via plugins
 content_versioning:
   text: Yes, built-in
+review_workflow:
+  text: Draft / Publish

@@ -13,18 +13,21 @@ categories:
     title: Framework
   database:
     title: Database
-  scheduled_publishing:
-    title: Scheduled publishing
-  search:
-    title: Search
   review_workflow:
     title: Review workflow for editors
   content_versioning:
     title: Versioning for content
   content_types:
     title: Content types
-  comments:
-    title: Comments
+  common_features:
+    title: Common features
+    children:
+      search:
+        title: Search
+      comments:
+        title: Comments
+      scheduled_publishing:
+        title: Scheduled publishing
   extendibility:
     title: Extendibility
     children:
@@ -70,6 +73,8 @@ categories:
 systems:
   adobe_experience_manager:
     title: Adobe Experience Manager
+  apostrophe:
+    title: Apostrophe
   contentful:
     title: Contentful
     logo: contentful.svg
