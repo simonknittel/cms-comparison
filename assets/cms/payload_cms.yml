@@ -28,3 +28,10 @@ database:
   source: https://payloadcms.com/docs/getting-started/installation
 framework:
   text: Express.js
+search:
+  text: Yes, built-in
+  source: https://payloadcms.com/docs/queries/overview
+comments:
+  text: No, needs to be implemented manually
+form_submissions:
+  text: No, needs to be implemented manually

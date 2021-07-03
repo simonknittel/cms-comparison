@@ -4,7 +4,7 @@ homepage:
 framework:
   text: Not applicable
 hosting:
-  text: Cloud service
+  text: SaaS / Cloud service
 database:
   text: Not applicable
 programming_language:

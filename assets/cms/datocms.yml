@@ -5,7 +5,7 @@ homepage:
   text: datocms.com
   url: https://datocms.com
 hosting:
-  text: Cloud service
+  text: SaaS / Cloud service
 programming_language:
   text: Not applicable
 database:
@@ -37,3 +37,8 @@ image_transformations:
 review_workflow:
   text: Yes, built-in
   source: https://www.datocms.com/features/workflows
+scheduled_publishing:
+  text: Yes, built-in
+  source: https://www.datocms.com/docs/general-concepts/scheduled-publishing-unpublishing
+form_submissions:
+  text: No, needs to be implemented manually

@@ -114,6 +114,8 @@ systems:
   statamic:
     title: Statamic
     logo: statamic.svg
+  storyblok:
+    title: Storyblok
   strapi:
     title: Strapi
     logo: strapi.svg

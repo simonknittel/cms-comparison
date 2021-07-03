@@ -35,3 +35,10 @@ form_builder:
 form_submissions:
   text: No, but available via official plugin
   source: https://github.com/apostrophecms/apostrophe-forms
+search:
+  text: Yes, built-in
+  source: https://github.com/apostrophecms/apostrophe/tree/main/modules/%40apostrophecms/search
+search_suggestions:
+  text: No, needs to be implemented manually
+comments:
+  text: No, needs to be implemented manually

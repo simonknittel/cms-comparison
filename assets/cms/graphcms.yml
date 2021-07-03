@@ -12,7 +12,7 @@ enterprise_support:
   text: Available
   source: https://graphcms.com/enterprise-headless-cms
 hosting:
-  text: Cloud service
+  text: SaaS / Cloud service
 custom_themes:
   text: Not applicable since it's a headless CMS
 content_versioning:

@@ -5,7 +5,7 @@ homepage:
   text: contentful.com
   url: https://contentful.com
 hosting:
-  text: Cloud service
+  text: SaaS / Cloud service
 programming_language:
   text: Not applicable
 database:
@@ -36,3 +36,5 @@ image_upload:
 image_transformations:
   text: On-demand, defined by query parameters in the URL
   source: https://www.contentful.com/developers/docs/concepts/images/
+form_submissions:
+  text: No, needs to be implemented manually

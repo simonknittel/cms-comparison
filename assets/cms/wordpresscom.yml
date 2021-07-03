@@ -2,7 +2,7 @@ homepage:
   text: wordpress.com
   url: https://wordpress.com/
 hosting:
-  text: Cloud service
+  text: SaaS / Cloud service
 framework:
   text: Not applicable
 database:
