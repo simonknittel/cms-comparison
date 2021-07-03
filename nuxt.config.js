@@ -35,6 +35,7 @@ export default {
 
   plugins: [
     { src: '@/plugins/v-hotkey.js', mode: 'client' },
+    { src: '@/plugins/sessionStorage.js', mode: 'client' },
   ],
 
   buildModules: [

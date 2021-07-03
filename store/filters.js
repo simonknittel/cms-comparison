@@ -8,11 +8,24 @@ export function state() {
 export const mutations = {
   enableSystem(state, id) {
     state.disabledSystems.splice(state.disabledSystems.indexOf(id))
+
+    window.sessionStorage.setItem('disabledSystems', state.disabledSystems)
   },
 
   disableSystem(state, id) {
-    if (state.disabledSystems.includes(id)) return
-    state.disabledSystems.push(id)
+    let arrayOfIds = []
+
+    if (Array.isArray(id)) {
+      arrayOfIds.push(...id)
+    } else {
+      arrayOfIds.push(id)
+    }
+
+    arrayOfIds = arrayOfIds.filter(id => state.disabledSystems.includes(id) === false)
+
+    state.disabledSystems.push(...arrayOfIds)
+
+    window.sessionStorage.setItem('disabledSystems', state.disabledSystems)
   },
 
   toggleOverlay(state) {
