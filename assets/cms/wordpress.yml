@@ -28,7 +28,7 @@ graphql:
 image_transformations:
   text: On upload, defined by the used theme
 2fa:
-  text: No, but available via plugin
+  text: No, but available via community plugin
 image_upload:
   text: Yes, built-in
 comments:
@@ -40,6 +40,8 @@ custom_themes:
 search:
   text: Yes, built-in
   source: https://codex.wordpress.org/Creating_a_Search_Page
+search_suggestions:
+  text: No, but available via community plugins
 signup_confirmation_email:
   text: Yes, built-in
 emails_via_extensions:
@@ -52,3 +54,9 @@ content_versioning:
   text: Yes, built-in
 review_workflow:
   text: Draft / Publish
+form_builder:
+  text: No, but available via community plugins
+  source: https://wordpress.org/plugins/search/form/
+form_submissions:
+  text: No, but available via community plugins
+  source: https://wordpress.org/plugins/search/form/

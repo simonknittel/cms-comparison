@@ -9,9 +9,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "2.15.7"
+    "nuxt": "2.15.7",
+    "v-hotkey": "0.9.0"
   },
   "devDependencies": {
+    "@nuxtjs/svg": "0.1.12",
     "fibers": "5.0.0",
     "sass": "1.34.1",
     "sass-loader": "10.1.1",

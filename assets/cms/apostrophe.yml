@@ -29,3 +29,9 @@ rest_api:
   source: https://v3.docs.apostrophecms.org/reference/api/
 graphql:
   text: No
+form_builder:
+  text: No, but available via official plugin
+  source: https://github.com/apostrophecms/apostrophe-forms
+form_submissions:
+  text: No, but available via official plugin
+  source: https://github.com/apostrophecms/apostrophe-forms

@@ -24,6 +24,8 @@ categories:
     children:
       search:
         title: Search
+      search_suggestions:
+        title: Search suggestions
       comments:
         title: Comments
       scheduled_publishing:
@@ -69,6 +71,13 @@ categories:
         title: Translations per page
       i18n_site_tree:
         title: Customizable site tree per translation
+  forms:
+    title: Forms
+    children:
+      form_builder:
+        title: Form builder
+      form_submissions:
+        title: Form submissions
 
 systems:
   adobe_experience_manager:

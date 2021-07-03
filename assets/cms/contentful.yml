@@ -30,3 +30,9 @@ comments:
   text: No, needs to be implemented manually
 content_types:
   text: None built-in content types. Custom content types are available via web ui.
+image_upload:
+  text: Yes, built-in
+  source: https://www.contentful.com/developers/docs/concepts/images/
+image_transformations:
+  text: On-demand, defined by query parameters in the URL
+  source: https://www.contentful.com/developers/docs/concepts/images/

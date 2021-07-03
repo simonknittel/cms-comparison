@@ -28,3 +28,12 @@ i18n_pages:
   source: https://www.datocms.com/features/multi-language
 comments:
   text: No, needs to be implemented manually
+image_upload:
+  text: Yes, built-in
+  source: https://www.datocms.com/features/images-api
+image_transformations:
+  text: On-demand, defined by query parameters in the URL
+  source: https://www.datocms.com/features/images-api
+review_workflow:
+  text: Yes, built-in
+  source: https://www.datocms.com/features/workflows
