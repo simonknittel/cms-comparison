@@ -2,7 +2,10 @@
   <thead>
     <tr>
       <th class="first">
-        <button class="filters-button" @click="toggleOverlay">Filters</button>
+        <button class="filters-button" @click="toggleOverlay">
+          <FilterIcon />
+          Filters
+        </button>
       </th>
 
       <ColumnHead
@@ -18,15 +21,22 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex';
+import { mapMutations } from 'vuex'
+import FilterIcon from '../assets/icons/filter-solid.svg?inline'
 
 export default {
   name: 'TableHead',
+
+  components: {
+    FilterIcon,
+  },
+
   methods: {
     ...mapMutations({
       toggleOverlay: 'filters/toggleOverlay',
     }),
   },
+
   computed: {
     visibleSystems() {
       const visible = Object.values(this.$store.state.cms.systems).filter(({ id }) => {
@@ -60,7 +70,13 @@ th {
 
 .filters-button {
   @include buttons.default;
+
   margin-left: auto;
   margin-right: auto;
+
+  svg {
+    width: .8rem;
+    height: .8rem;
+  }
 }
 </style>

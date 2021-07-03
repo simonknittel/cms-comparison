@@ -2,19 +2,29 @@
   <th>
     <img
       v-if="logo"
-      :src="require(`../assets/logos/${logo}`)"
+      :src="require(`../assets/cms/${logo}`)"
       :alt="'Logo of ' + title"
     >
 
     <span v-else>{{ title }}</span>
 
-    <button class="x" @click.prevent="onClick" :title="'Hide ' + title">Hide {{ title }}</button>
+    <button class="x" @click.prevent="onClick">
+      <CrossIcon />
+      Hide column
+    </button>
   </th>
 </template>
 
 <script>
+import CrossIcon from '../assets/icons/times-solid.svg?inline'
+
 export default {
   name: 'ColumnHead',
+
+  components: {
+    CrossIcon,
+  },
+
   props: {
     title: {
       type: String,
@@ -26,6 +36,7 @@ export default {
     },
     logo: String
   },
+
   methods: {
     onClick() {
       this.$store.commit('filters/disableSystem', this.$props.id)

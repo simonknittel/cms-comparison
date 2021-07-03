@@ -5,27 +5,34 @@
     <div class="overlay">
       <button class="close" @click="hideOverlay" title="Close filters">
         <CrossIcon />
+        Close
       </button>
 
       <h2 class="heading">Filters</h2>
       <p class="description">Select a checkbox to hide individual columns and rows</p>
 
-      <FilterItem
-        v-for="system in systems"
-        :key="system.id"
+      <h3 class="subheading">Columns</h3>
 
-        :title="system.title"
-        :disabled="system.disabled"
+      <div class="column-list">
+        <FilterItem
+          v-for="system in systems"
+          :key="system.id"
 
-        :onChange="(e) => { onChange(e, system.id) }"
-      />
+          :title="system.title"
+          :disabled="system.disabled"
+
+          :onChange="(e) => { onChange(e, system.id) }"
+        />
+      </div>
+
+      <h3 class="subheading">Rows</h3>
     </div>
   </div>
 </template>
 
 <script>
 import { mapMutations } from 'vuex';
-import { systems } from '../assets/cms/config.yml'
+import { systems } from '../assets/cms-config.yml'
 import CrossIcon from '../assets/icons/times-solid.svg?inline'
 
 export default {
@@ -100,6 +107,7 @@ export default {
 .overlay {
   @include box-shadows.default;
 
+
   z-index: 1;
   position: relative;
 
@@ -111,7 +119,6 @@ export default {
   max-width: 95vw;
 
   height: calc(100% - 10rem);
-  max-height: 70vh;
 
   padding: 2rem;
 
@@ -124,11 +131,18 @@ export default {
 
 .description {
   margin-top: .5rem;
-  margin-bottom: 1rem;
+}
+
+.subheading {
+  margin-top: 1rem;
+}
+
+.column-list {
+  margin-top: .5rem;
 }
 
 .close {
-  @include buttons.closing;
+  @include buttons.default;
 
   position: absolute;
   right: 0rem;

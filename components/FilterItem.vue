@@ -66,6 +66,9 @@ export default {
   .checkbox:checked + &,
   .label:hover & {
     background-color: colors.$accent;
+  }
+
+  .checkbox:checked + & {
     background-image: url('~assets/icons/check-solid-white.svg');
     background-position: center center;
     background-repeat: no-repeat;

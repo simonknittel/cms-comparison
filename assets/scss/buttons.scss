@@ -17,6 +17,13 @@
   background-color: colors.$accent;
   color: colors.$white;
 
+  svg {
+    width: 1rem;
+    height: 1rem;
+
+    margin-right: .5rem;
+  }
+
   &:hover,
   &:focus {
     cursor: pointer;
@@ -26,12 +33,4 @@
   &:active {
     background-color: darken(colors.$accent, 10);
   }
-}
-
-@mixin closing {
-  @include default;
-
-  $size: 2rem;
-  width: $size;
-  height: $size;
 }

@@ -1,4 +1,4 @@
-import { systems, categories } from '../assets/cms/config.yml'
+import { systems, categories } from '../assets/cms-config.yml'
 
 const populatedSystems = {}
 
