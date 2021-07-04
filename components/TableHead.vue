@@ -10,12 +10,15 @@
       </th>
 
       <ColumnHead
-        v-for="system in visibleSystems"
+        v-for="system in sortedSystems"
         :key="system.id"
 
         :title="system.title"
         :id="system.id"
         :logo="system.logo"
+        :class="{
+          disabled: $store.state.filters.disabledSystems.includes(system.id)
+        }"
       />
     </tr>
   </thead>
@@ -39,12 +42,10 @@ export default {
   },
 
   computed: {
-    visibleSystems() {
-      const visible = Object.values(this.$store.state.cms.systems).filter(({ id }) => {
-        return this.$store.state.filters.disabledSystems.includes(id) ? false : true
-      })
-
-      return visible.sort((a, b) => a.title.localeCompare(b.title))
+    sortedSystems() {
+      return Object
+        .values(this.$store.state.cms.systems)
+        .sort((a, b) => a.title.localeCompare(b.title))
     },
 
     filtersCount() {
@@ -87,5 +88,9 @@ th {
 
 .filters-count {
   margin-left: .5em;
+}
+
+.disabled {
+  display: none;
 }
 </style>

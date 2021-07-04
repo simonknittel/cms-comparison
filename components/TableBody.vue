@@ -5,10 +5,10 @@
       :key="category.id"
 
       :class="{
-        'children-hidden': childrenHidden.includes(category.id)
+        'children-hidden': $store.state.categories.collapsed.includes(category.id)
       }"
     >
-      <td v-if="category.children" class="parent" :colspan="visibleSystems.length + 1">
+      <td v-if="category.children" class="parent" :colspan="sortedSystems.length + 1">
         <div class="parent-title" @click="() => toggleChildren(category.id)" title="Click to collapse category">
           <span class="parent-title-inner">
             {{ category.title }}
@@ -25,11 +25,14 @@
               />
 
               <Cell
-                v-for="system in visibleSystems"
+                v-for="system in sortedSystems"
                 :key="system.id"
 
                 :system="system"
                 :categoryId="child.id"
+                :class="{
+                  disabled: $store.state.filters.disabledSystems.includes(system.id)
+                }"
               />
             </tr>
           </tbody>
@@ -42,11 +45,14 @@
         />
 
         <Cell
-          v-for="system in visibleSystems"
+          v-for="system in sortedSystems"
           :key="system.id"
 
           :system="system"
           :categoryId="category.id"
+          :class="{
+            disabled: $store.state.filters.disabledSystems.includes(system.id)
+          }"
         />
       </template>
     </tr>
@@ -63,29 +69,21 @@ export default {
     CaretIcon,
   },
 
-  data: function() {
-    return {
-      childrenHidden: []
-    }
-  },
-
   methods: {
     toggleChildren(categoryId) {
-      if (this.childrenHidden.includes(categoryId)) {
-        this.childrenHidden.splice(this.childrenHidden.indexOf(categoryId), 1)
+      if (this.$store.state.categories.collapsed.includes(categoryId)) {
+        this.$store.commit('categories/uncollapse', categoryId)
       } else {
-        this.childrenHidden.push(categoryId)
+        this.$store.commit('categories/collapse', categoryId)
       }
     },
   },
 
   computed: {
-    visibleSystems() {
-      const visible = Object.values(this.$store.state.cms.systems).filter(({ id }) => {
-        return this.$store.state.filters.disabledSystems.includes(id) ? false : true
-      })
-
-      return visible.sort((a, b) => a.title.localeCompare(b.title))
+    sortedSystems() {
+      return Object
+        .values(this.$store.state.cms.systems)
+        .sort((a, b) => a.title.localeCompare(b.title))
     },
   },
 }
@@ -159,5 +157,9 @@ th, td {
 
     transition: transform .2s;
   }
+}
+
+.disabled {
+  display: none;
 }
 </style>
