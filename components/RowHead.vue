@@ -1,18 +1,29 @@
 <template>
   <th>
     {{ title }}
+
+    <span
+      v-if="explanation"
+      class="explanation"
+      :title="explanation"
+    >Explanation</span>
   </th>
 </template>
 
 <script>
 export default {
   name: 'RowHead',
+
   props: {
     title: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+
+    explanation: {
+      type: String,
+    },
+  },
 }
 </script>
 
@@ -37,5 +48,13 @@ th {
     padding: 1rem;
     font-size: 1rem;
   }
+}
+
+.explanation {
+  cursor: help;
+  display: block;
+  margin-top: .125rem;
+  color: hsla(0, 0%, 0%, .3);
+  text-decoration: underline;
 }
 </style>

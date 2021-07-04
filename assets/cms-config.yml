@@ -30,6 +30,10 @@ categories:
         title: Comments
       scheduled_publishing:
         title: Scheduled publishing
+        explanation: A feature that let's you publish content automatically at a previously specified date and time.
+      emails:
+        title: Sending emails
+        explanation: It's common that CMS' and plugins only provide the functionality to send emails via external providers like Mailgun or similar.
   extendibility:
     title: Extendibility
     children:
@@ -39,8 +43,6 @@ categories:
         title: Extension/Plugin store
       custom_themes:
         title: Custom themes
-      emails:
-        title: Sending emails
   authentication:
     title: Authentication
     children:
