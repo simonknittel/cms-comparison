@@ -19,7 +19,7 @@ graphql:
 rest_api:
   text: Yes, built-in
 comments:
-  text: No, needs to be implemented via a plugin or manually
+  text: No, but community plugin available
   source: https://github.com/VirtusLab/strapi-plugin-comments
 custom_themes:
   text: Not applicable since it's a headless CMS

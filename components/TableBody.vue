@@ -42,6 +42,7 @@
       <template v-else>
         <RowHead
           :title="category.title"
+          :explanation="category.explanation"
         />
 
         <Cell

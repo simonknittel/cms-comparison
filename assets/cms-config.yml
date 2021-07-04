@@ -5,20 +5,20 @@ categories:
     title: Pricing
   enterprise_support:
     title: Enterprise support
-  hosting:
-    title: Hosting
-  programming_language:
-    title: Programming language
-  framework:
-    title: Framework
-  database:
-    title: Database
-  review_workflow:
-    title: Review workflow for editors
-  content_versioning:
-    title: Versioning for content
-  content_types:
-    title: Content types
+  technical_architecture:
+    title: Technical architecture
+    children:
+      hosting:
+        title: Hosting
+      programming_language:
+        title: Programming language
+      framework:
+        title: Framework
+      database:
+        title: Database
+      content_types:
+        title: Content types
+        explanation: CMS which were made for specific purpose like creating a blog usually have pre-defined content types like pages or blog posts. On other CMS you can define the content types yourself.
   common_features:
     title: Common features
     children:
@@ -33,7 +33,11 @@ categories:
         explanation: A feature that let's you publish content automatically at a previously specified date and time.
       emails:
         title: Sending emails
-        explanation: It's common that CMS' and plugins only provide the functionality to send emails via external providers like Mailgun or similar.
+        explanation: It's common that CMS and plugins only provide the functionality to send emails via external providers like Mailgun or similar.
+      review_workflow:
+        title: Review workflow for editors
+      content_versioning:
+        title: Versioning for content
   extendibility:
     title: Extendibility
     children:
