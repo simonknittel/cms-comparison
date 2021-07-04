@@ -15,3 +15,8 @@ framework:
   source: https://symfony.com/projects/grav
 headless:
   text: Traditional
+rest_api:
+  text: No, but available via community plugin
+  source: https://github.com/Regaez/grav-plugin-api
+graphql:
+  text: No

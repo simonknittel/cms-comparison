@@ -39,8 +39,8 @@ categories:
         title: Extension/Plugin store
       custom_themes:
         title: Custom themes
-      emails_via_extensions:
-        title: Sending emails via custom extensions
+      emails:
+        title: Sending emails
   authentication:
     title: Authentication
     children:

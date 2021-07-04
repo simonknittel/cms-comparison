@@ -26,3 +26,17 @@ framework:
   text: Laravel
 headless:
   text: Traditional
+content_versioning:
+  text: Yes, built-in
+  source: https://statamic.com/features
+form_builder:
+  text: Yes, built-in
+  source: https://statamic.dev/forms
+form_submissions:
+  text: Yes, built-in
+  source: https://statamic.dev/forms
+extendable:
+  text: Via plugins
+emails:
+  text: Yes, built-in (via SwiftMailer)
+  source: https://statamic.dev/email

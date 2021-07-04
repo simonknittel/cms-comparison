@@ -18,8 +18,8 @@ hosting:
 content_types:
   text: None built-in content types. Custom content types are available via web ui.
   source: https://payloadcms.com/docs/configuration/collections
-emails_via_extensions:
-  text: Yes, via Nodemailer
+emails:
+  text: Yes, built-in (via Nodemailer)
   source: https://payloadcms.com/docs/email/overview
 programming_language:
   text: Node.js
