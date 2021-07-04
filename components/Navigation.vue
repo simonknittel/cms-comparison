@@ -19,15 +19,36 @@
     <!-- <span class="item disabled">
       <span class="inner">Customer Relationship Management</span>
     </span> -->
+
+    <a class="github" href="https://github.com/simonknittel/cms-comparison" rel="noopener" title="Open repository on GitHub">
+      <GitHubIcon />
+      GitHub
+    </a>
   </nav>
 </template>
+
+<script>
+  import GitHubIcon from '../assets/icons/github-brands.svg?inline'
+
+  export default {
+    name: 'Navigation',
+
+    components: {
+      GitHubIcon
+    }
+  }
+</script>
 
 <style lang="scss" scoped>
 @use '../assets/scss/colors';
 
 nav {
   @media (min-width: 40rem) {
+    flex: 1 0 auto;
+
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -93,6 +114,25 @@ nav {
     width: 100%;
     height: 2px;
     background-color: hsla(180, 25%, 50%, .3);
+  }
+}
+
+.github {
+  margin-right: -.5rem;
+  padding: .5rem;
+
+  text-decoration: none;
+  color: inherit;
+
+  svg {
+    vertical-align: middle;
+
+    --size: 1.5rem;
+    width: var(--size);
+    height: var(--size);
+
+    margin-right: .25rem;
+    margin-top: -3px;
   }
 }
 </style>

@@ -18,5 +18,17 @@ export default function sessionStorage({ store }) {
       'categories/collapse',
       collapsedCategories
     )
+  } else {
+    store.commit('categories/collapse', [
+      'common_features',
+      'extendibility',
+      'authentication',
+      'apis',
+      'media',
+      'i18n',
+      'forms'
+    ])
+
+    window.sessionStorage.setItem('collapsedCategories', store.state.categories.collapsed)
   }
 }

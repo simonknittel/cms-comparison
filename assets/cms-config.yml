@@ -10,6 +10,9 @@ categories:
     children:
       hosting:
         title: Hosting
+      headless:
+        title: Headless or traditional
+        explanation: A headless CMS is usually combined with an additional system which creates the user-facing application like a static site generator.
       programming_language:
         title: Programming language
       framework:
@@ -59,8 +62,6 @@ categories:
   apis:
     title: APIs
     children:
-      headless:
-        title: Headless or traditional
       rest_api:
         title: REST API
       graphql:
@@ -73,7 +74,7 @@ categories:
       image_transformations:
         title: Image transformations
   i18n:
-    title: i18n
+    title: Internationalization / i18n
     children:
       i18n_pages:
         title: Translations per page

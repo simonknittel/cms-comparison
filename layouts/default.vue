@@ -36,7 +36,7 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 
-  background-color: hsla(180, 50%, 50% , .05);
+  background-color: rgba(0, 0, 0, .02);
 }
 
 html::-webkit-scrollbar-track {

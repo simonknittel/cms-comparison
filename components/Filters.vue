@@ -143,6 +143,7 @@ export default {
 
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, .2);
+  background-color: hsla(180, 50%, 50%, .1);
 }
 
 .overlay {
