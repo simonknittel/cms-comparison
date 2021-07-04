@@ -17,7 +17,12 @@ plugin_store:
 rest_api:
   text: Yes, built-in
   source: https://statamic.dev/content-api
+graphql:
+  text: Yes, only available via paid plan
+  source: https://statamic.dev/graphql
 database:
   text: Flat-file, Laravel Eloquent
 framework:
   text: Laravel
+headless:
+  text: Traditional

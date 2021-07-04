@@ -60,3 +60,5 @@ form_builder:
 form_submissions:
   text: No, but available via community plugins
   source: https://wordpress.org/plugins/search/form/
+headless:
+  text: Traditional, but headless possible via community plugins

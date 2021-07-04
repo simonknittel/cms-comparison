@@ -42,3 +42,5 @@ scheduled_publishing:
   source: https://www.datocms.com/docs/general-concepts/scheduled-publishing-unpublishing
 form_submissions:
   text: No, needs to be implemented manually
+headless:
+  text: Headless only

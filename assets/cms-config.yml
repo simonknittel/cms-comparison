@@ -53,6 +53,8 @@ categories:
   apis:
     title: APIs
     children:
+      headless:
+        title: Headless or traditional
       rest_api:
         title: REST API
       graphql:

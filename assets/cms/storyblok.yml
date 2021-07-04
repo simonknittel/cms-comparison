@@ -23,3 +23,5 @@ image_upload:
 image_transformations:
   text: On-demand, defined by query parameters in the URL
   source: https://www.storyblok.com/docs/image-service
+headless:
+  text: Headless only

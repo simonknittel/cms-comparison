@@ -35,3 +35,5 @@ comments:
   text: No, needs to be implemented manually
 form_submissions:
   text: No, needs to be implemented manually
+headless:
+  text: Headless only

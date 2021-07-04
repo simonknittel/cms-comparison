@@ -38,3 +38,5 @@ image_transformations:
   source: https://www.contentful.com/developers/docs/concepts/images/
 form_submissions:
   text: No, needs to be implemented manually
+headless:
+  text: Headless only

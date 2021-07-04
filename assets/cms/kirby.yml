@@ -25,3 +25,5 @@ rest_api:
   text: No, needs to be implemented manually
 graphql:
   text: No, needs to be implemented manually
+headless:
+  text: Traditional

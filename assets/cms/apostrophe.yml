@@ -42,3 +42,5 @@ search_suggestions:
   text: No, needs to be implemented manually
 comments:
   text: No, needs to be implemented manually
+headless:
+  text: Headless and traditional possible

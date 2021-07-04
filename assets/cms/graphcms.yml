@@ -24,3 +24,5 @@ database:
   text: Not applicable
 framework:
   text: Not applicable
+headless:
+  text: Headless only

@@ -13,3 +13,5 @@ database:
 framework:
   text: Symfony
   source: https://symfony.com/projects/grav
+headless:
+  text: Traditional

@@ -67,6 +67,8 @@ th {
 }
 
 img {
+  vertical-align: middle;
+
   max-width: 50%;
   max-height: 50%;
 

@@ -24,3 +24,5 @@ image_upload:
   text: Yes, built-in
 extendable:
   text: Via plugins or custom code
+headless:
+  text: Traditional and headless possible

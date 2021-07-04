@@ -38,3 +38,5 @@ content_types:
   text: None built-in content types. Custom content types are available via custom code or the web ui.
 extendable:
   text: Via plugins or custom code
+headless:
+  text: Headless only
