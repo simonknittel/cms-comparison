@@ -7,7 +7,7 @@ export function state() {
 
 export const mutations = {
   enableSystem(state, id) {
-    state.disabledSystems.splice(state.disabledSystems.indexOf(id))
+    state.disabledSystems.splice(state.disabledSystems.indexOf(id), 1)
 
     window.sessionStorage.setItem('disabledSystems', state.disabledSystems)
   },

@@ -72,7 +72,7 @@ export default {
   methods: {
     toggleChildren(categoryId) {
       if (this.childrenHidden.includes(categoryId)) {
-        this.childrenHidden.splice(this.childrenHidden.indexOf(categoryId))
+        this.childrenHidden.splice(this.childrenHidden.indexOf(categoryId), 1)
       } else {
         this.childrenHidden.push(categoryId)
       }
