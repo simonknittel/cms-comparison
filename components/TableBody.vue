@@ -9,12 +9,12 @@
       }"
     >
       <td v-if="category.children" class="parent" :colspan="sortedSystems.length + 1">
-        <div class="parent-title" @click="() => toggleChildren(category.id)" title="Click to collapse category">
+        <button class="parent-title" @click.prevent="() => toggleChildren(category.id)" title="Click to collapse category">
           <span class="parent-title-inner">
             {{ category.title }}
             <CaretIcon />
           </span>
-        </div>
+        </button>
 
         <table class="children">
           <tbody>
@@ -124,8 +124,16 @@ th, td {
 
 .parent-title {
   cursor: pointer;
+  width: 100%;
   box-shadow: 2px 0 5px -3px hsla(0, 0%, 0%, .2);
+  border: none;
   background-color: colors.$accent-light;
+  text-align: left;
+
+  &:hover,
+  &:focus-visible {
+    background-color: colors.$accent-light2;
+  }
 }
 
 .parent-title-inner {

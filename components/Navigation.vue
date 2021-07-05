@@ -134,5 +134,11 @@ nav {
     margin-right: .25rem;
     margin-top: -3px;
   }
+
+  &:hover,
+  &:focus-visible {
+    border-radius: 3px;
+    background-color: colors.$accent-light2;
+  }
 }
 </style>
