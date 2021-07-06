@@ -125,6 +125,7 @@ th, td {
 .parent-title {
   cursor: pointer;
   width: 100%;
+  padding: 0;
   box-shadow: 2px 0 5px -3px hsla(0, 0%, 0%, .2);
   border: none;
   background-color: colors.$accent-light;

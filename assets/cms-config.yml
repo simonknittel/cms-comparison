@@ -117,6 +117,8 @@ systems:
     title: Payload CMS
   prismic:
     title: Prismic
+  sanity:
+    title: Sanity
   squarespace:
     title: Squarespace
     logo: squarespace.svg

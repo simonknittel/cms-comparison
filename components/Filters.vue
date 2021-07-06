@@ -141,7 +141,7 @@ export default {
   width: 100%;
   height: 100%;
 
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); // Results in performance hit during scrolling
   background-color: rgba(255, 255, 255, .2);
   background-color: hsla(180, 50%, 50%, .1);
 }
