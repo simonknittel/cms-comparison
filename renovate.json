@@ -13,5 +13,6 @@
       "timezone": "Europe/Berlin",
       "prCreation": "not-pending"
     }
-  ]
+  ],
+  "enabled": false
 }
